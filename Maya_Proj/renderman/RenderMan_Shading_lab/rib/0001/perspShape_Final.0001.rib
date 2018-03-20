@@ -1,0 +1,338 @@
+##RenderMan RIB
+#Created by RenderMan for Maya 21.3 (@1715407 Feb 15 2017)
+#Mon Mar 05 23:47:46 PST 2018
+version 3.04
+Option "ribparse" "string varsubst" [""]
+Option "ribparse" "string varsubst" ["$"]
+IfBegin "!defined(RMSPROJ_FROM_ENV)" 
+	Option "user" "string RMSPROJ" ["/Users/rachelthomas/Google Drive/Art/3D Art/TATOE_SHORT/Maya_Proj/"]
+IfEnd 
+IfBegin "!defined(RMSTREE)" 
+	Option "user" "string RMSTREE" ["/Applications/Pixar/RenderManForMaya-21.3-maya2017/"]
+IfEnd 
+Option "searchpath" "string resource" ["${RMSPROJ}:@"]
+Option "searchpath" "string archive" ["${RMSPROJ}:."]
+Option "searchpath" "string display" ["${RMSTREE}/bin:@"]
+Option "searchpath" "string shader" ["${RMSPROJ}:${RMSTREE}/lib/shaders/:${RMANTREE}/lib/shaders:@"]
+Option "searchpath" "string texture" ["${RMSPROJ}:${RMSTREE}/lib/textures/:@"]
+Option "searchpath" "string rixplugin" ["${RMSTREE}/lib/shaders/:@"]
+Option "searchpath" "string dirmap" [""]
+Option "searchpath" "string rifilter" ["${RMSTREE}/lib/rif/:${RMANTREE}/lib/plugins:@"]
+Option "searchpath" "string procedural" ["${RMSTREE}/lib/plugins/:${RMSTREE}/lib/plugins:${RMANTREE}/lib/plugins:@"]
+##rifcontrol insert begin -rif RLFInjector -rifend
+FrameBegin 1
+	Identity 
+	Option "user" "string pass_id" ["perspShape_Final"] "string pass_phase" ["/Job/Frames/Images"] "string pass_class" ["Final"] "string pass_flavor" [""] "string pass_crew" [""] "string pass_camera_name" ["perspShape"] "string pass_camera_flavor" [""] "string pass_layer" ["defaultRenderLayer"] "string renderer" ["RIS"] "int pass_features_trace" [1] "int input_color_profile" [0]
+	Option "shading" "int directlightingservices" [1]
+	Option "trace" "int maxdepth" [10]
+	PixelVariance 0.005
+	Option "bucket" "string order" ["horizontal"]
+	Option "limits" "int[2] bucketsize" [16 16]
+	Option "trace" "float decimationrate" [1]
+	Option "hair" "float minwidth" [0.5]
+	Option "user" "int iesIgnoreWatts" [1]
+	Option "statistics" "int level" [1]
+	Option "statistics" "string filename" ["stdout"]
+	Option "statistics" "string xmlfilename" ["renderman/RenderMan_Shading_lab/rib/0001/perspShape_Final.0001.xml"]
+	Option "limits" "color zthreshold" [0.996 0.996 0.996]
+	Option "limits" "color othreshold" [0.996 0.996 0.996]
+	Option "limits" "int texturememory" [2097152]
+	Option "limits" "int geocachememory" [2097152]
+	Option "limits" "int proceduralmemory" [0]
+	Option "limits" "int deepshadowtiles" [1000]
+	Option "limits" "int deepshadowmemory" [102400]
+	Option "limits" "int brickmemory" [10240]
+	Option "user" "float sceneUnits" [1]
+	Option "lpe" "string diffuse2" ["Diffuse"]
+	Option "lpe" "string diffuse3" ["Subsurface"]
+	Option "lpe" "string specular2" ["Specular"]
+	Option "lpe" "string specular3" ["RoughSpecular"]
+	Option "lpe" "string specular4" ["Clearcoat"]
+	Option "lpe" "string specular5" ["Iridescence"]
+	Option "lpe" "string specular6" ["Fuzz"]
+	Option "lpe" "string specular7" ["SingleScatter"]
+	Option "lpe" "string specular8" ["Glass"]
+	Option "limits" "int opacitycachememory" [1024000]
+	CropWindow 0 1 0 1
+	Hider "raytrace" "int adaptall" [0] "int incremental" [1] "string pixelfiltermode" ["weighted"] "int minsamples" [0] "int minextrasamples" [0] "int maxsamples" [512] "float darkfalloff" [0.025]
+	Integrator "PxrPathTracer" "PxrPathTracer" "int maxPathLength" [10] "int maxContinuationLength" [-1] "string sampleMode" ["bxdf"] "int numLightSamples" [1] "int numBxdfSamples" [1] "int numIndirectSamples" [1] "int numDiffuseSamples" [1] "int numSpecularSamples" [1] "int numSubsurfaceSamples" [1] "int numRefractionSamples" [1] "int allowCaustics" [0] "int accumOpacity" [0] "int rouletteDepth" [4] "float rouletteThreshold" [0.2] "int clampDepth" [2] "float clampLuminance" [10] "string imagePlaneSubset" ["rman__imageplane"]
+	Format 960 540 1
+	Display "renderman/RenderMan_Shading_lab/images/RenderMan_Shading_lab" "it" "rgba" "string filter" ["gaussian"] "float[2] filterwidth" [2 2] "int[4] quantize" [0 0 0 0] "float dither" [0] "float[2] exposure" [1 1] "float[3] remap" [0 0 0] "int merge" [0] "string connection" ["-launchURI /Applications/Pixar/RenderManProServer-21.3/bin/it.app/Contents/MacOS/it"] "string dspyParams" [" itOpenHandler {::ice::startTimer;};;; itCloseHandler {::ice::endTimer %arglist; };;; dspyRender -renderer preview -time 1 -crop 0 1 0 1 -port 65460 -context \"renderman/RenderMan_Shading_lab/images/RenderMan_Shading_lab\" -notes \"(Mon Mar 05 23:47:46 PST 2018)\nSamples: 0-512@0.005  PxrPathTracer  Mode: bxdf  Light: 1  Bsdf: 1  Indir: 1\""]
+	#Camera perspShape
+	Clipping 0.1 10000
+	Projection "perspective" "fov" [54.4322]
+	ScreenWindow -1 1 -0.5625 0.5625
+	Shutter 0 0
+	ConcatTransform [ 0.999263 -0.0176294 -0.0341003 0  6.57273e-10 0.88831 -0.459244 0  -0.0383878 -0.458906 -0.887655 0  3.5059e-07 -2.28781 18.8898 1 ]
+	Camera "world" "float[2] shutteropening" [0 1]
+	Option "user" "color camera_bg" [0 0 0] "float camera_bga" [0]
+	DisplayFilter "PxrBackgroundDisplayFilter" "background" "color backgroundColor" [0 0 0]
+	ResourceBegin 
+		WorldBegin 
+			##RLF ScopeBegin -name perspShape_Final -localbinding 1 -rlffilename renderman/RenderMan_Shading_lab/rib/0001/perspShape_Final.0001.rlf -namespace 
+			ScopedCoordinateSystem "world_ref"
+			TransformBegin 
+				ConcatTransform [ 0.55 0 0 0  0 0.55 0 0  0 0 0.55 0  0 0 0 1 ]
+				ScopedCoordinateSystem "special_paint_carPaint:car_paint:place3dTexture2"
+			TransformEnd 
+			TransformBegin 
+				ConcatTransform [ 0.85 0 0 0  0 0.85 0 0  0 0 0.85 0  0 0 9.43008 1 ]
+				ScopedCoordinateSystem "special_paint_carPaint:car_paint:place3dTexture3"
+			TransformEnd 
+			TransformBegin 
+				ConcatTransform [ 0.85 0 0 0  0 0.85 0 0  0 0 0.85 0  0 0 -32.5187 1 ]
+				ScopedCoordinateSystem "special_paint_carPaint:car_paint:place3dTexture4"
+			TransformEnd 
+			TransformBegin 
+				ConcatTransform [ 0.47 0 0 0  0 0.47 0 0  0 0 0.47 0  0 0 -16.3212 1 ]
+				ScopedCoordinateSystem "special_paint_carPaint:car_paint:place3dTexture5"
+			TransformEnd 
+			Attribute "user" "float[17] Rig_Light_Tent:place2dTexture2" [1 1 0 0 0
+				0 0 0 1 1 1 1 0 0 0 0 0]
+			Attribute "visibility" "int transmission" [1] "int indirect" [1]
+			Bxdf "PxrDiffuse" "default" 
+			Attribute "user" "int shader_bindingstrength" [0]
+			Attribute "trace" "int maxdiffusedepth" [1] "int maxspeculardepth" [2] "int samplemotion" [1] "float autobias" [1] "float bias" [0.001] "int displacements" [1]
+			Attribute "dice" "string referencecamera" ["worldcamera"] "float minlength" [-1] "float micropolygonlength" [1] "int watertight" [0]
+			Attribute "procedural" "int reentrant" [1]
+			Attribute "displacementbound" "string coordinatesystem" ["shader"] "float sphere" [0]
+			Attribute "user" "string irRenderCam" ["false,0.603816,10.7073,15.7178"]
+			Attribute "user" "string irRenderCamFOV" ["54.4322"]
+			Attribute "user" "string irRenderCamXform" ["0.999263,-1.73472e-18,-0.0383878,0,-0.0176294,0.88831,-0.458906,0,0.0341003,0.459244,0.887655,0,0.603816,10.7073,15.7178,1"]
+			Attribute "user" "string irRenderCamRatio" ["1"]
+			AttributeBegin 
+				Attribute "identifier" "string name" ["PxrDiskLightShape1"]
+				Transform [ 30.596 -2.15791 22.4328 0  10.2528 35.0171 -10.6153 0  -20.069 14.5995 28.7765 0  -36.6529 23.1938 42.3253 1 ]
+				Rotate 180 0 1 0
+				Scale 1 -1 1
+				Attribute "visibility" "int camera" [0]
+				Attribute "visibility" "int indirect" [0] "int transmission" [0]
+				Attribute "visibility" "int camera" [0]
+				Light "PxrDiskLight" "PxrDiskLightShape1" "float intensity" [1] "float exposure" [2] "color lightColor" [1 1 1] "int enableTemperature" [0] "float temperature" [6500] "float emissionFocus" [0] "color emissionFocusTint" [0 0 0] "float specular" [1] "float diffuse" [1] 
+					"float intensityNearDist" [0] "float coneAngle" [90] "float coneSoftness" [0] "string iesProfile" [""] "float iesProfileScale" [0] "int enableShadows" [1] "color shadowColor" [0 0 0] "float shadowDistance" [-1] "float shadowFalloff" [-1] "float shadowFalloffGamma" [1] "string shadowSubset" [""] "string shadowExcludeSubset" [""] 
+					"int areaNormalize" [0] "int traceLightPaths" [0] "int thinShadow" [1] "int fixedSampleCount" [0] "string lightGroup" [""] "float importanceMultiplier" [1] "__instanceid" ["PxrDiskLightShape1_0"]
+			AttributeEnd 
+			Illuminate "PxrDiskLightShape1" 1
+			AttributeBegin 
+				Attribute "identifier" "string name" ["PxrDiskLightShape2"]
+				Transform [ -9.25408 -0.640885 3.73515 0  0.0265315 9.84477 1.75492 0  -3.78964 1.63393 -9.10873 0  -31.2654 26.3925 -43.5053 1 ]
+				Rotate 180 0 1 0
+				Scale 1 -1 1
+				Attribute "visibility" "int camera" [0]
+				Attribute "visibility" "int indirect" [0] "int transmission" [0]
+				Attribute "visibility" "int camera" [0]
+				Light "PxrDiskLight" "PxrDiskLightShape2" "float intensity" [1] "float exposure" [5] "color lightColor" [1 1 1] "int enableTemperature" [1] "float temperature" [3200] "float emissionFocus" [0] "color emissionFocusTint" [0 0 0] "float specular" [1] "float diffuse" [1] 
+					"float intensityNearDist" [0] "float coneAngle" [90] "float coneSoftness" [0] "string iesProfile" [""] "float iesProfileScale" [0] "int enableShadows" [1] "color shadowColor" [0 0 0] "float shadowDistance" [-1] "float shadowFalloff" [-1] "float shadowFalloffGamma" [1] "string shadowSubset" [""] "string shadowExcludeSubset" [""] 
+					"int areaNormalize" [0] "int traceLightPaths" [0] "int thinShadow" [1] "int fixedSampleCount" [0] "string lightGroup" [""] "float importanceMultiplier" [1] "__instanceid" ["PxrDiskLightShape2_0"]
+			AttributeEnd 
+			Illuminate "PxrDiskLightShape2" 1
+			AttributeBegin 
+				Attribute "identifier" "string name" ["PxrDiskLightShape3"]
+				Transform [ -1.47594 0.159113 1.34025 0  0.380239 -1.85659 0.639146 0  1.295 0.726479 1.33986 0  42.9051 23.8932 46.792 1 ]
+				Rotate 180 0 1 0
+				Scale 1 -1 1
+				Attribute "visibility" "int camera" [0]
+				Attribute "visibility" "int indirect" [0] "int transmission" [0]
+				Attribute "visibility" "int camera" [0]
+				Light "PxrDiskLight" "PxrDiskLightShape3" "float intensity" [1] "float exposure" [7] "color lightColor" [1 1 1] "int enableTemperature" [0] "float temperature" [6500] "float emissionFocus" [0] "color emissionFocusTint" [0 0 0] "float specular" [1] "float diffuse" [1] 
+					"float intensityNearDist" [0] "float coneAngle" [90] "float coneSoftness" [0] "string iesProfile" [""] "float iesProfileScale" [0] "int enableShadows" [1] "color shadowColor" [0 0 0] "float shadowDistance" [-1] "float shadowFalloff" [-1] "float shadowFalloffGamma" [1] "string shadowSubset" [""] "string shadowExcludeSubset" [""] 
+					"int areaNormalize" [0] "int traceLightPaths" [0] "int thinShadow" [1] "int fixedSampleCount" [0] "string lightGroup" [""] "float importanceMultiplier" [1] "__instanceid" ["PxrDiskLightShape3_0"]
+			AttributeEnd 
+			Illuminate "PxrDiskLightShape3" 1
+			AttributeBegin 
+				Attribute "identifier" "string name" ["Rig_Light_Tent:LeftLightShape"]
+				Transform [ 1.99977e-14 0 25.7319 0  0 22.8688 0 0  -25.1122 0 1.95161e-14 0  -12.6376 11.8984 4.3905 1 ]
+				Attribute "visibility" "int camera" [1]
+				Attribute "visibility" "int indirect" [0] "int transmission" [0]
+				Bxdf "PxrLightEmission" "visualizer" "string __instanceid" ["Rig_Light_Tent:LeftLightShape_visualizer"]
+				ShadingRate 5
+				Surface "renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_LeftLightShape_rfm" "float rman__LightPrimaryVisibility" [1] "string shape" ["rect"] "float intensity" [11] "color lightcolor" [0.0142028 0.0142028 0.0142028] "string lightcolormap" [""] "float[2] proceduralResolution" [1024 1024] "float linearizecolormap" [0] "float temperature" [-1] "color specAmount" [1 1 1] 
+					"color diffAmount" [1 1 1] "float fixedSampleCount" [-1] "float importance" [1] "float coneangle" [20] "float penumbraangle" [5] "float penumbraexponent" [0] "string profilemap" [""] "string iesprofile" [""] "float profilerange" [-1] "float distributionAngle" [90] "float angularVisibility" [1] 
+					"float rmsDisplayBarnDoors" [0] "float rmsBarnT" [0] "float rmsBarnB" [0] "float rmsBarnL" [0] "float rmsBarnR" [0] "string barnDoorMap" ["default.tex"] "color shadowColor" [0 0 0] "float traceShadows" [1] "float adaptive" [1] "string subset" [""] "string excludesubset" [""] "string shadowname" [""] 
+					"float samplebase" [0.5] "float shadowmaxdist" [-1] "float bias" [-1] "float mapbias" [1] "float mapbias2" [1] "float sides" [0] "float areaNormalize" [1] "string photonTarget" [""] "string __category" ["stdrsl_plausible,Rig_Light_Tent:LeftLightShape"] "string __group" [""] "__instanceid" ["renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_LeftLightShape_rfm_0"]
+				ShadingRate 5
+				AreaLightSource "renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_LeftLightShape_rfm" "Rig_Light_Tent:LeftLightShape" "float rman__LightPrimaryVisibility" [1] "string shape" ["rect"] "float intensity" [11] "color lightcolor" [0.0142028 0.0142028 0.0142028] "string lightcolormap" [""] "float[2] proceduralResolution" [1024 1024] "float linearizecolormap" [0] "float temperature" [-1] "color specAmount" [1 1 1] 
+					"color diffAmount" [1 1 1] "float fixedSampleCount" [-1] "float importance" [1] "float coneangle" [20] "float penumbraangle" [5] "float penumbraexponent" [0] "string profilemap" [""] "string iesprofile" [""] "float profilerange" [-1] "float distributionAngle" [90] "float angularVisibility" [1] 
+					"float rmsDisplayBarnDoors" [0] "float rmsBarnT" [0] "float rmsBarnB" [0] "float rmsBarnL" [0] "float rmsBarnR" [0] "string barnDoorMap" ["default.tex"] "color shadowColor" [0 0 0] "float traceShadows" [1] "float adaptive" [1] "string subset" [""] "string excludesubset" [""] "string shadowname" [""] 
+					"float samplebase" [0.5] "float shadowmaxdist" [-1] "float bias" [-1] "float mapbias" [1] "float mapbias2" [1] "float sides" [0] "float areaNormalize" [1] "string photonTarget" [""] "string __category" ["stdrsl_plausible,Rig_Light_Tent:LeftLightShape"] "string __group" [""] "__instanceid" ["renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_LeftLightShape_rfm_0"]
+				Attribute "dice" "float micropolygonlength" [100]
+				Sides 1
+				Attribute "dice" "string offscreenstrategy" ["sphericalprojection"]
+				ReverseOrientation 
+				Geometry "rectlight" 
+			AttributeEnd 
+			Illuminate "Rig_Light_Tent_LeftLightShape" 1
+			AttributeBegin 
+				Attribute "identifier" "string name" ["Rig_Light_Tent:RightLightShape"]
+				Transform [ 1.99977e-14 0 25.7319 0  -2.80062e-15 -22.8688 2.25503e-30 0  25.1122 -3.07536e-15 -1.67281e-14 0  12.6376 12.0223 4.29875 1 ]
+				Attribute "visibility" "int camera" [1]
+				Attribute "visibility" "int indirect" [0] "int transmission" [0]
+				Bxdf "PxrLightEmission" "visualizer" "string __instanceid" ["Rig_Light_Tent:RightLightShape_visualizer"]
+				ShadingRate 5
+				Surface "renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_RightLightShape_rfm" "float rman__LightPrimaryVisibility" [1] "string shape" ["rect"] "float intensity" [8] "color lightcolor" [0.0142028 0.0142028 0.0142028] "string lightcolormap" [""] "float[2] proceduralResolution" [1024 1024] "float linearizecolormap" [0] "float temperature" [-1] "color specAmount" [1 1 1] 
+					"color diffAmount" [1 1 1] "float fixedSampleCount" [-1] "float importance" [1] "float coneangle" [20] "float penumbraangle" [5] "float penumbraexponent" [0] "string profilemap" [""] "string iesprofile" [""] "float profilerange" [-1] "float distributionAngle" [90] "float angularVisibility" [1] 
+					"float rmsDisplayBarnDoors" [0] "float rmsBarnT" [0] "float rmsBarnB" [0] "float rmsBarnL" [0] "float rmsBarnR" [0] "string barnDoorMap" ["default.tex"] "color shadowColor" [0 0 0] "float traceShadows" [1] "float adaptive" [1] "string subset" [""] "string excludesubset" [""] "string shadowname" [""] 
+					"float samplebase" [0.5] "float shadowmaxdist" [-1] "float bias" [-1] "float mapbias" [1] "float mapbias2" [1] "float sides" [0] "float areaNormalize" [1] "string photonTarget" [""] "string __category" ["stdrsl_plausible,Rig_Light_Tent:RightLightShape"] "string __group" [""] "__instanceid" ["renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_RightLightShape_rfm_0"]
+				ShadingRate 5
+				AreaLightSource "renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_RightLightShape_rfm" "Rig_Light_Tent:RightLightShape" "float rman__LightPrimaryVisibility" [1] "string shape" ["rect"] "float intensity" [8] "color lightcolor" [0.0142028 0.0142028 0.0142028] "string lightcolormap" [""] "float[2] proceduralResolution" [1024 1024] "float linearizecolormap" [0] "float temperature" [-1] "color specAmount" [1 1 1] 
+					"color diffAmount" [1 1 1] "float fixedSampleCount" [-1] "float importance" [1] "float coneangle" [20] "float penumbraangle" [5] "float penumbraexponent" [0] "string profilemap" [""] "string iesprofile" [""] "float profilerange" [-1] "float distributionAngle" [90] "float angularVisibility" [1] 
+					"float rmsDisplayBarnDoors" [0] "float rmsBarnT" [0] "float rmsBarnB" [0] "float rmsBarnL" [0] "float rmsBarnR" [0] "string barnDoorMap" ["default.tex"] "color shadowColor" [0 0 0] "float traceShadows" [1] "float adaptive" [1] "string subset" [""] "string excludesubset" [""] "string shadowname" [""] 
+					"float samplebase" [0.5] "float shadowmaxdist" [-1] "float bias" [-1] "float mapbias" [1] "float mapbias2" [1] "float sides" [0] "float areaNormalize" [1] "string photonTarget" [""] "string __category" ["stdrsl_plausible,Rig_Light_Tent:RightLightShape"] "string __group" [""] "__instanceid" ["renderman/RenderMan_Shading_lab/shaders/Rig_Light_Tent_RightLightShape_rfm_0"]
+				Attribute "dice" "float micropolygonlength" [100]
+				Sides 1
+				Attribute "dice" "string offscreenstrategy" ["sphericalprojection"]
+				ReverseOrientation 
+				Geometry "rectlight" 
+			AttributeEnd 
+			Illuminate "Rig_Light_Tent_RightLightShape" 1
+			AttributeBegin 
+			AttributeEnd 
+			AttributeBegin 
+			AttributeEnd 
+			AttributeBegin 
+			AttributeEnd 
+			AttributeBegin 
+			AttributeEnd 
+			AttributeBegin 
+				Attribute "identifier" "string name" ["pSphere1"]
+				Attribute "identifier" "float id" [16]
+				ConcatTransform [ 3.01696 0 0 0  0 3.01696 0 0  0 0 3.01696 0  0 2.57546 0 1 ]
+				AttributeBegin 
+					AttributeBegin 
+						Attribute "identifier" "string name" ["pSphereShape1"]
+						Attribute "identifier" "float id" [37]
+						Sides 2
+						Attribute "visibility" "int camera" [1] "int indirect" [1] "int transmission" [1]
+						Attribute "shade" "string transmissionhitmode" ["shader"]
+						Attribute "grouping" "string membership" ["+reflection,refraction,shadow"]
+						##RLF Inject SurfaceShading -attribute sets@,PxrLMMetal1SG,
+						TransformBegin 
+							Procedural2 "DelayedReadArchive2" "SimpleBound" "string filename" ["renderman/RenderMan_Shading_lab/rib/job/staticGeoCache.job.zip!renderman/RenderMan_Shading_lab/rib/job/pSphereShape1.job.rib"] "float[6] bound" [-1 1 -1 1 -1 1] "int __immediatesubdivide" [0]
+						TransformEnd 
+					AttributeEnd 
+				AttributeEnd 
+			AttributeEnd 
+			AttributeBegin 
+				Attribute "identifier" "string name" ["Rig_Light_Tent:light_tent_rig"]
+				Attribute "identifier" "float id" [13]
+				##RLF ScopeBegin -namespace Rig_Light_Tent -rlffilename renderman/RenderMan_Shading_lab/rib/job/Rig_Light_Tent.job.rlf -stripnamespace 1 -localbinding 0
+				ConcatTransform [ 1 0 0 0  0 1 0 0  0 0 1 0  0 0 0 1 ]
+				AttributeBegin 
+					Attribute "identifier" "string name" ["Rig_Light_Tent:LeftLight"]
+					Attribute "identifier" "float id" [7]
+					ConcatTransform [ 1.99977e-14 0 25.7319 0  -0 22.8688 0 0  -25.1122 -0 1.95161e-14 0  -12.6376 11.8984 4.3905 1 ]
+					AttributeBegin 
+					AttributeEnd 
+					AttributeBegin 
+						Attribute "identifier" "string name" ["Rig_Light_Tent:annotationLocator1"]
+						Attribute "identifier" "float id" [11]
+						ConcatTransform [ 3.09473e-17 0 -0.0398212 0  0 0.0437278 0 0  0.0388623 0 3.02021e-17 0  -1.11022e-16 0 -3.33067e-16 1 ]
+						AttributeBegin 
+							AttributeBegin 
+								Attribute "identifier" "string name" ["Rig_Light_Tent:annotationLocator1Shape"]
+								Attribute "identifier" "float id" [34]
+								Sides 2
+								Attribute "visibility" "int camera" [1] "int indirect" [0] "int transmission" [1]
+								Attribute "shade" "string transmissionhitmode" ["shader"]
+								Attribute "grouping" "string membership" ["+shadow"]
+							AttributeEnd 
+						AttributeEnd 
+						AttributeBegin 
+							Attribute "identifier" "string name" ["Rig_Light_Tent:annotation1"]
+							Attribute "identifier" "float id" [10]
+							ConcatTransform [ 1 0 0 0  0 1 0 0  0 0 1 0  -14.6718 15.088 -18.6332 1 ]
+							AttributeBegin 
+							AttributeEnd 
+						AttributeEnd 
+					AttributeEnd 
+				AttributeEnd 
+				AttributeBegin 
+					Attribute "identifier" "string name" ["Rig_Light_Tent:RightLight"]
+					Attribute "identifier" "float id" [8]
+					ConcatTransform [ 1.99977e-14 0 25.7319 0  -2.80062e-15 -22.8688 2.25503e-30 0  25.1122 -3.07536e-15 -1.67281e-14 0  12.6376 12.0223 4.29875 1 ]
+					AttributeBegin 
+					AttributeEnd 
+				AttributeEnd 
+				AttributeBegin 
+				AttributeEnd 
+				AttributeBegin 
+				AttributeEnd 
+				AttributeBegin 
+				AttributeEnd 
+				AttributeBegin 
+				AttributeEnd 
+				AttributeBegin 
+					Attribute "identifier" "string name" ["Rig_Light_Tent:light_tent"]
+					Attribute "identifier" "float id" [12]
+					ConcatTransform [ 1 0 0 0  0 1 0 0  0 0 1 0  0 0 5.90522 1 ]
+					AttributeBegin 
+						AttributeBegin 
+							Attribute "identifier" "string name" ["Rig_Light_Tent:light_tentShape"]
+							Attribute "identifier" "float id" [35]
+							Sides 1
+							ReverseOrientation 
+							Attribute "visibility" "int camera" [1] "int indirect" [1] "int transmission" [0]
+							Attribute "shade" "string transmissionhitmode" ["shader"]
+							Attribute "grouping" "string membership" ["+reflection,refraction"]
+							##RLF Inject SurfaceShading -attribute sets@,Rig_Light_Tent:PxrLMDiffuse2SG,
+							TransformBegin 
+								Procedural2 "DelayedReadArchive2" "SimpleBound" "string filename" ["renderman/RenderMan_Shading_lab/rib/job/staticGeoCache.job.zip!renderman/RenderMan_Shading_lab/rib/job/Rig_Light_Tent_light_tentShape.job.rib"] "float[6] bound" [-12 12 -5.93066e-06 24 -15.811 12] "int __immediatesubdivide" [0]
+							TransformEnd 
+						AttributeEnd 
+					AttributeEnd 
+				AttributeEnd 
+				AttributeBegin 
+				AttributeEnd 
+				##RLF ScopeEnd -namespace Rig_Light_Tent
+			AttributeEnd 
+			AttributeBegin 
+				Attribute "identifier" "string name" ["special_paint_carPaint:group1"]
+				Attribute "identifier" "float id" [23]
+				ConcatTransform [ 1 0 0 0  0 1 0 0  0 0 1 0  0 0 0 1 ]
+				AttributeBegin 
+					Attribute "identifier" "string name" ["special_paint_carPaint:car_paint:place3dTexture2"]
+					Attribute "identifier" "float id" [19]
+					ConcatTransform [ 0.55 0 0 0  0 0.55 0 0  0 0 0.55 0  0 0 0 1 ]
+				AttributeEnd 
+				AttributeBegin 
+					Attribute "identifier" "string name" ["special_paint_carPaint:car_paint:place3dTexture3"]
+					Attribute "identifier" "float id" [20]
+					ConcatTransform [ 0.85 0 0 0  0 0.85 0 0  0 0 0.85 0  0 0 9.43008 1 ]
+				AttributeEnd 
+				AttributeBegin 
+					Attribute "identifier" "string name" ["special_paint_carPaint:car_paint:place3dTexture4"]
+					Attribute "identifier" "float id" [21]
+					ConcatTransform [ 0.85 0 0 0  0 0.85 0 0  0 0 0.85 0  0 0 -32.5187 1 ]
+				AttributeEnd 
+				AttributeBegin 
+					Attribute "identifier" "string name" ["special_paint_carPaint:car_paint:place3dTexture5"]
+					Attribute "identifier" "float id" [22]
+					ConcatTransform [ 0.47 0 0 0  0 0.47 0 0  0 0 0.47 0  0 0 -16.3212 1 ]
+				AttributeEnd 
+			AttributeEnd 
+			AttributeBegin 
+				Attribute "identifier" "string name" ["PxrDiskLight1"]
+				Attribute "identifier" "float id" [1]
+				ConcatTransform [ 30.596 -2.15791 22.4328 0  10.2528 35.0171 -10.6153 0  -20.069 14.5995 28.7765 0  -36.6529 23.1938 42.3253 1 ]
+				AttributeBegin 
+				AttributeEnd 
+			AttributeEnd 
+			AttributeBegin 
+				Attribute "identifier" "string name" ["PxrDiskLight2"]
+				Attribute "identifier" "float id" [2]
+				ConcatTransform [ -9.25408 -0.640885 3.73515 0  0.0265315 9.84477 1.75492 0  -3.78964 1.63393 -9.10873 0  -31.2654 26.3925 -43.5053 1 ]
+				AttributeBegin 
+				AttributeEnd 
+			AttributeEnd 
+			AttributeBegin 
+				Attribute "identifier" "string name" ["PxrDiskLight3"]
+				Attribute "identifier" "float id" [3]
+				ConcatTransform [ -1.47594 0.159113 1.34025 0  0.380239 -1.85659 0.639146 0  1.295 0.726479 1.33986 0  42.9051 23.8932 46.792 1 ]
+				AttributeBegin 
+				AttributeEnd 
+			AttributeEnd 
+			##RLF ScopeEnd -name perspShape_Final
+		WorldEnd 
+	ResourceEnd 
+	##streammarker 4
+FrameEnd 
