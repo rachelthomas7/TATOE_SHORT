@@ -46,3 +46,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+### Huge Renderman Files ###
+Maya_Proj/renderman/*
+
