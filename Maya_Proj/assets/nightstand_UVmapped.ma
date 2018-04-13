@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: nightstand_UVmapped.ma
-//Last modified: Fri, Apr 13, 2018 12:37:13 AM
+//Last modified: Fri, Apr 13, 2018 02:21:53 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -19,8 +19,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "8ED2ADDE-8B44-BE8A-5A29-C397416314D4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.8706361113847958 3.4235369690527526 -6.2697350821913229 ;
-	setAttr ".r" -type "double3" -17.738352729722255 572.99999999974386 359.99999999993025 ;
+	setAttr ".t" -type "double3" -3.7573671028272444 4.5115448709958645 -5.8188924007022758 ;
+	setAttr ".r" -type "double3" -26.138352729719649 574.19999999974243 359.99999999992883 ;
 	setAttr ".rp" -type "double3" -1.1102230246251565e-16 -2.2204460492503131e-16 -4.4408920985006262e-16 ;
 	setAttr ".rpt" -type "double3" 2.9167021068565929e-16 -1.9390456776377248e-16 6.7473526665517509e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -3236,7 +3236,7 @@ createNode PxrNormalMap -n "PxrNormalMap2";
 	rename -uid "3902A19C-574B-1A62-FB53-2E88CBE7BF4E";
 	setAttr ".filename" -type "string" "/Users/rachelthomas/Google Drive/Art/3D Art/TATOE_SHORT/Maya_Proj//sourceimages/nightstand/nightstand_nightstand handles shader_Normal.tex";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "821F5AC5-FF4B-B27E-66B9-80965B33677F";
+	rename -uid "E98CE66C-BE44-7285-F5E2-D5A450025139";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -2232.4321866440091 -432.88782346944288 ;
 	setAttr ".tgi[0].vh" -type "double2" -1159.0621380091015 179.98277212335924 ;
