@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: step_ladder_UVmapped.ma
-//Last modified: Fri, Apr 13, 2018 04:22:14 PM
+//Last modified: Fri, Apr 13, 2018 04:44:18 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -19,8 +19,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "26E84396-2144-AFF0-5C96-25B5F3DCCF7B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.526386043518734 11.375983520752801 6.9003871654156663 ;
-	setAttr ".r" -type "double3" -30.338352456260637 1496.5999999996291 0 ;
+	setAttr ".t" -type "double3" 10.343774376168497 13.348405371658151 6.2272251549625262 ;
+	setAttr ".r" -type "double3" -38.73835245626065 1496.199999999629 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F0D3388A-5B4C-F76B-B06F-80A55448FCB5";
 	setAttr -k off ".v" no;
