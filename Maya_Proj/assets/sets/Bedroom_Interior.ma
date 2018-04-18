@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bedroom_Interior.ma
-//Last modified: Tue, Apr 17, 2018 09:06:29 PM
+//Last modified: Tue, Apr 17, 2018 09:07:03 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "bed_UVmapped" -rfn "bed_UVmappedRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/madihight/TATOE_SHORT/Maya_Proj//assets/bed_UVmapped.ma";
