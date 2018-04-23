@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: lamp_UVmapped.ma
-//Last modified: Sun, Apr 22, 2018 07:43:18 PM
+//Last modified: Sun, Apr 22, 2018 07:44:17 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "PxrSphereLight"
@@ -19,8 +19,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "92E375B3-8F4A-585F-F65D-2F8393950D29";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 13.226764081920942 0.97952959477650881 0.97131283799405477 ;
-	setAttr ".r" -type "double3" 2.6616472704318754 445.79999999977315 5.4284424078416504e-15 ;
+	setAttr ".t" -type "double3" 12.718057326987344 5.3753784444354329 -0.48857847976097646 ;
+	setAttr ".r" -type "double3" -16.538352729570683 452.19999999977267 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "AF3A2DFD-CA45-7CDE-1F2B-73BD2CB1694F";
 	setAttr -k off ".v" no;
