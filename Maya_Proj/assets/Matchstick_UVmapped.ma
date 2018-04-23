@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Matchstick_UVmapped.ma
-//Last modified: Thu, Apr 19, 2018 05:26:43 PM
+//Last modified: Thu, Apr 19, 2018 05:29:11 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "OmnidirectionalStereo"
@@ -19,8 +19,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "49F45051-1C47-0455-A809-8297BED8B1A1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.7748650243514628 -1.3119260195489675 -3.5784257355539819 ;
-	setAttr ".r" -type "double3" -195.93835272645097 -680.59999999997115 -1.02899459482193e-15 ;
+	setAttr ".t" -type "double3" -0.58138413491951502 -2.8024072882603672 -3.8372970306924321 ;
+	setAttr ".r" -type "double3" -215.73835272644979 -708.99999999996987 -1.2150315574594424e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "359399E8-5643-7CE9-4660-7C920AB92060";
 	setAttr -k off ".v" no;
