@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: book_UVmapped.ma
-//Last modified: Tue, Apr 24, 2018 12:20:57 PM
+//Last modified: Tue, Apr 24, 2018 12:27:19 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "OmnidirectionalStereo"
@@ -18,8 +18,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C3586CC4-4A47-BE4C-E22F-9C8A6AA7E6CB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.25737341697830141 2.3991845429243921 2.0543662090518149 ;
-	setAttr ".r" -type "double3" -52.538352729632386 -362.19999999991813 4.9732824146396487e-16 ;
+	setAttr ".t" -type "double3" -0.51034646725111465 1.4650749950401289 2.843304603632538 ;
+	setAttr ".r" -type "double3" -29.138352729633109 -366.99999999991064 -3.2044400919830165e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4CA89EDF-BF4F-FB2E-D7B0-2F830EF501DA";
 	setAttr -k off ".v" no;
