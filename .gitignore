@@ -51,3 +51,5 @@ $RECYCLE.BIN/
 ### Huge Renderman Files ###
 Maya_Proj/renderman/*
 
+### Maya Cache Files ###
+Maya_Proj/cache/*
