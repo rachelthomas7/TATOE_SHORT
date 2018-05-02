@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: FirstFloor_Interior.ma
-//Last modified: Tue, May 01, 2018 10:06:56 PM
+//Last modified: Tue, May 01, 2018 10:09:12 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Armchair" -rfn "ArmchairRN" -op "v=0;" -typ "mayaAscii" "/Users/madihight/TATOE_SHORT/Maya_Proj//assets/Armchair.ma";
 file -rdi 1 -ns "side_table" -rfn "side_tableRN1" -op "v=0;" -typ "mayaAscii"
@@ -2227,8 +2227,8 @@ createNode camera -n "cameraShape2" -p "lampBottomLight";
 	setAttr ".fcp" 1000;
 createNode transform -n "camera1";
 	rename -uid "3CB4D338-4114-47A0-9522-0396C255FA88";
-	setAttr ".t" -type "double3" -7.485522782587986 4.2573784248061353 5.5019571040212893 ;
-	setAttr ".r" -type "double3" 0.14473087261695841 -1069.889836103363 0 ;
+	setAttr ".t" -type "double3" -4.7116316304392969 3.0319821797892414 1.8490946852303507 ;
+	setAttr ".r" -type "double3" -2.0154083273830299 -1058.2898361033554 0 ;
 createNode camera -n "cameraShape1" -p "camera1";
 	rename -uid "C97BF940-4D31-1583-2E0C-ADBB91B30677";
 	setAttr -k off ".v";
@@ -2237,12 +2237,12 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".ff" 0;
 	setAttr ".fl" 34.555570120326045;
 	setAttr ".fs" 64;
-	setAttr ".coi" 13.387923385652654;
+	setAttr ".coi" 8.0951450690357163;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
-	setAttr ".tp" -type "double3" -9.8356496672517473 4.291196688384538 -7.6780373015592129 ;
+	setAttr ".tp" -type "double3" -7.7042671068985946 2.7472900322075064 -5.6671847783656997 ;
 createNode transform -n "otherRoomLight1";
 	rename -uid "00D44E7C-4051-85FF-B77D-AB86C2307ECA";
 	addAttr -ci true -sn "expandedState" -ln "expandedState" -min 0 -max 1 -at "bool";
