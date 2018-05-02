@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: lightbulb.ma
-//Last modified: Wed, May 02, 2018 02:16:19 PM
+//Last modified: Wed, May 02, 2018 02:18:47 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "PxrSphereLight"
@@ -6761,12 +6761,6 @@ createNode shadingEngine -n "PxrSurface1SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "14A4859B-E343-1163-00E1-7F907CCE4229";
-createNode shadingEngine -n "PxrSurface2SG";
-	rename -uid "B0712CB5-C54E-86D2-1DFC-47B9CEE5DBDA";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo2";
-	rename -uid "8C2ABB75-B842-7B0E-F1A9-189F302547AE";
 createNode PxrSurface -n "lightbulb_metal_shader";
 	rename -uid "3245FEF4-2243-AD8D-0809-F8BD449BDA5A";
 	setAttr ".specularFresnelMode" 1;
@@ -6831,7 +6825,7 @@ createNode file -n "file5";
 createNode place2dTexture -n "place2dTexture5";
 	rename -uid "770FEB8E-3747-3563-17CF-5A93C01EFACC";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "D871E2C0-654F-5645-D14E-5DBCE1E1E824";
+	rename -uid "730FD2A4-1F44-84FA-19BB-D7B6E9418854";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -930.78754161200015 -637.58638023010565 ;
 	setAttr ".tgi[0].vh" -type "double2" 762.18831418029424 111.72166470515452 ;
@@ -6869,7 +6863,7 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".tmr" 4096;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 6 ".st";
+	setAttr -s 5 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
 	setAttr -s 7 ".s";
@@ -6896,13 +6890,11 @@ select -ne :hardwareRenderGlobals;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Nickel_SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "pvc_SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Nickel_SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "pvc_SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
@@ -6934,7 +6926,6 @@ connectAttr "bulbShape.iog" "PxrSurface1SG.dsm" -na;
 connectAttr "PxrSurface1SG.msg" "materialInfo1.sg";
 connectAttr "lightbulb_bulb_shader.msg" "materialInfo1.m";
 connectAttr "lightbulb_bulb_shader.msg" "materialInfo1.t" -na;
-connectAttr "PxrSurface2SG.msg" "materialInfo2.sg";
 connectAttr "file2.ocr" "lightbulb_metal_shader.specularRoughness";
 connectAttr "file2.ocg" "lightbulb_metal_shader.roughSpecularRoughness";
 connectAttr "file3.ocr" "lightbulb_metal_shader.diffuseGain";
@@ -7077,7 +7068,6 @@ connectAttr "PxrSurface1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0]
 connectAttr "file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
 connectAttr "PxrSurface1SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "Nickel_SG.pa" ":renderPartition.st" -na;
 connectAttr "pvc_SG.pa" ":renderPartition.st" -na;
 connectAttr "lightbulb_bulb_shader.msg" ":defaultShaderList1.s" -na;
