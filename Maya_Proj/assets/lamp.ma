@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: lamp.ma
-//Last modified: Wed, May 02, 2018 02:43:32 PM
+//Last modified: Wed, May 02, 2018 02:44:34 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "PxrSphereLight"
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "92E375B3-8F4A-585F-F65D-2F8393950D29";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 16.118321852836747 13.471894635179062 -23.132908948996555 ;
-	setAttr ".r" -type "double3" -20.138352729620127 145.80000000014874 0 ;
+	setAttr ".t" -type "double3" 4.6450862629612573 6.7084358457467594 -16.457685548608815 ;
+	setAttr ".r" -type "double3" -17.13835272962077 166.60000000014719 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "AF3A2DFD-CA45-7CDE-1F2B-73BD2CB1694F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 29.469419121827876;
+	setAttr ".coi" 17.318782806970443;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
