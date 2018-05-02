@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: scene6.ma
-//Last modified: Tue, Apr 24, 2018 09:38:33 PM
+//Last modified: Tue, May 01, 2018 03:06:19 PM
 //Codeset: 1252
 file -rdi 1 -ns "Basement_Interior" -rfn "Basement_InteriorRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/sets/Basement_Interior.ma";
@@ -21,7 +21,7 @@ file -rdi 2 -ns "cardboardBox4" -dr 1 -rfn "Basement_Interior:cardboardBox2RN1"
 file -rdi 1 -ns "al_fredo_uvmapped_rigged2" -rfn "al_fredo_uvmapped_rigged2RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/al_fredo_uvmapped_rigged2.ma";
 file -rdi 1 -ns "lightbulb_2" -rfn "lightbulb_2RN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/lightbulb.ma";
+		 "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/lightbulb_s6.ma";
 file -rdi 2 -ns "lightbulb2" -rfn "lightbulb_2:lightbulb2RN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/lightbulb_2.ma";
 file -r -ns "Basement_Interior" -dr 1 -rfn "Basement_InteriorRN" -op "v=0;" -typ
@@ -29,7 +29,7 @@ file -r -ns "Basement_Interior" -dr 1 -rfn "Basement_InteriorRN" -op "v=0;" -typ
 file -r -ns "al_fredo_uvmapped_rigged2" -dr 1 -rfn "al_fredo_uvmapped_rigged2RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/al_fredo_uvmapped_rigged2.ma";
 file -r -ns "lightbulb_2" -dr 1 -rfn "lightbulb_2RN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/lightbulb.ma";
+		 "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/lightbulb_s6.ma";
 requires maya "2017";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "PxrCamera"
 		 -nodeType "PxrVCM" -nodeType "PxrOcclusion" -nodeType "PxrValidateBxdf" -nodeType "PxrPathTracer"
@@ -131,7 +131,7 @@ createNode camera -n "scene8Shape" -p "scene8";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dfg" yes;
 createNode fosterParent -n "al_fredo_uvmapped_rigged2RNfosterParent1";
-	rename -uid "EBD6470F-487F-DE16-F703-459D5BA9B7CB";
+	rename -uid "B0D77BCA-4927-DF68-FC75-D19F1222FB04";
 createNode parentConstraint -n "alfredo_wrist_rgt_ctrl_parentConstraint1" -p "al_fredo_uvmapped_rigged2RNfosterParent1";
 	rename -uid "E21DECAE-4BAC-B546-F44F-9FB7D7FD3DAB";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "lightbulbW0" -dv 1 -min 0 -at "double";
@@ -149,7 +149,7 @@ createNode parentConstraint -n "alfredo_wrist_rgt_ctrl_parentConstraint1" -p "al
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.0708745407195153 11.328137592411821 -4.3423965343797946 ;
 	setAttr ".tg[0].tor" -type "double3" 9.7506388921699525 1.1981302515746746 -148.00657734708864 ;
-	setAttr ".lr" -type "double3" 186.16123252712481 16.113570364794651 63.577524154324578 ;
+	setAttr ".lr" -type "double3" 315.21702497932137 -13.562215505952079 -118.9425714817494 ;
 	setAttr ".rst" -type "double3" 25.166379549394861 -42.062787629055791 -13.320793658851784 ;
 	setAttr ".rsrr" -type "double3" 149.71731544143913 179.56872741391521 46.314603510165576 ;
 	setAttr -k on ".w0";
@@ -170,7 +170,7 @@ createNode parentConstraint -n "alfredo_wrist_lft_ctrl_parentConstraint1" -p "al
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -3.0767082786444888 9.5081020554382576 3.1899818191214706 ;
 	setAttr ".tg[0].tor" -type "double3" 7.3401756659989683 -9.4379059130466487 39.967986237683249 ;
-	setAttr ".lr" -type "double3" 245.71797086029719 -38.375550551352177 53.977557074528015 ;
+	setAttr ".lr" -type "double3" 193.84597295645327 142.66549697066057 60.977424236709183 ;
 	setAttr ".rst" -type "double3" -37.76785905894252 39.139603072594852 -1.5739519288992625 ;
 	setAttr ".rsrr" -type "double3" 180.00000000000003 160.91357133965485 63.963917051891315 ;
 	setAttr -k on ".w0";
@@ -1072,8 +1072,8 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	setAttr ".rman__riopt__Hider_name" -type "string" "bake";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "33AC2436-41B1-73F2-79BB-7CB19F97AC09";
-	setAttr -s 21 ".lnk";
-	setAttr -s 21 ".slnk";
+	setAttr -s 28 ".lnk";
+	setAttr -s 28 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "660D7D1E-4091-0E4B-11FA-FC96727F8F63";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
@@ -1387,8 +1387,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		1 |al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl" 
-		"rotate" " -type \"double3\" -29.721938773532436 332.48230791899971 -30.467082901039184"
-		
+		"rotate" " -type \"double3\" 0 102.09308097218312 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl" 
@@ -1396,7 +1395,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl" 
 		"rotateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
-		"translate" " -type \"double3\" -21.178521888966369 -0.4091713354777603 -1.9097389129235618"
+		"translate" " -type \"double3\" 0.76616846883972123 0.07988360424730967 0.37284338932868177"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
 		"translateX" " -av"
@@ -1405,7 +1404,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
-		"rotate" " -type \"double3\" -4.0069444522641557 0 0"
+		"rotate" " -type \"double3\" 27.223720244778772 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
@@ -1435,7 +1434,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_ctrl" 
-		"translate" " -type \"double3\" -40.234205664819299 -37.347586259775412 -35.71853013221363"
+		"translate" " -type \"double3\" -40.699142474836137 36.288885039229044 -6.3373824320932926"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_ctrl" 
 		"translateX" " -av"
@@ -1444,7 +1443,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_ctrl" 
-		"rotate" " -type \"double3\" 245.71797086029719 -38.375550551352177 53.977557074528015"
+		"rotate" " -type \"double3\" 193.84597295645327 142.66549697066057 60.977424236709183"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_lft_ctrl" 
 		"rotateX" " -av"
@@ -1542,7 +1541,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl|al_fredo_uvmapped_rigged2:alfredo_head_grp|al_fredo_uvmapped_rigged2:alfredo_head_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl|al_fredo_uvmapped_rigged2:alfredo_head_grp|al_fredo_uvmapped_rigged2:alfredo_head_ctrl" 
-		"rotate" " -type \"double3\" 0 0 23.101910433622905"
+		"rotate" " -type \"double3\" 0 0 -14.523768642047802"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl|al_fredo_uvmapped_rigged2:alfredo_head_grp|al_fredo_uvmapped_rigged2:alfredo_head_ctrl" 
 		"rotateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:arm_pole_lft_grp|al_fredo_uvmapped_rigged2:_control" 
@@ -1558,7 +1557,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
-		"translate" " -type \"double3\" 0.87779102095294093 1.4573475520610657 4.2214370137416797"
+		"translate" " -type \"double3\" -0.19672147994991462 8.6086345270886078 1.2371608261660789"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"translateX" " -av"
@@ -1567,7 +1566,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
-		"rotate" " -type \"double3\" -31.324285161394794 18.352713508206541 172.45715163860277"
+		"rotate" " -type \"double3\" -140.08133950017981 27.903503984262525 -25.080771658194095"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"rotateX" " -av"
@@ -1585,7 +1584,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"scaleZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
-		"poleVector" " -type \"double3\" -0.35606510262391922 -1.0507015735536438 0.96214397518744121"
+		"poleVector" " -type \"double3\" 0.19439035427952334 -1.050701573553642 1.0073310163293669"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"poleVectorX" " -av"
@@ -1606,7 +1605,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
-		"translate" " -type \"double3\" 0.27627524912053936 2.0227360406477022 4.4143151555819546"
+		"translate" " -type \"double3\" 0.62746427043067499 8.8059722284594493 1.258678839002263"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"translateZ" " -av"
@@ -1615,7 +1614,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"translateY" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
-		"rotate" " -type \"double3\" -8.9697797286788266 -21.599959755966736 109.62198208136323"
+		"rotate" " -type \"double3\" -118.15595369781195 -24.875074411742208 27.799366819325623"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"rotateX" " -av"
@@ -1633,7 +1632,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"scaleZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
-		"poleVector" " -type \"double3\" 1.2242770260595304 -1.0507059457903924 1.1016957810001884"
+		"poleVector" " -type \"double3\" 1.6180756694865384 -1.0507059457903924 0.30727668025163624"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"poleVectorX" " -av"
@@ -2311,7 +2310,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode reference -n "lightbulb_2RN";
 	rename -uid "D684C15E-4C1A-80AC-58F6-07B1E483ED89";
-	setAttr ".fn[0]" -type "string" "C:/Users/Vi Le/Desktop/lightbulb.ma";
+	setAttr -s 2 ".fn";
+	setAttr ".fn[0]" -type "string" "C:/Users/Vi Le/Desktop/FacilitatoeShort/TATOE_SHORT/Maya_Proj//assets/lightbulb.ma";
+	setAttr ".fn[1]" -type "string" "C:/Users/Vi Le/Desktop/lightbulb.ma";
 	setAttr -s 24 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
@@ -2358,12 +2359,12 @@ createNode reference -n "lightbulb_2RN";
 		"displaySmoothMesh" " 2"
 		"lightbulb_2:lightbulb2RN" 0
 		"lightbulb_2RN" 36
-		2 "|lightbulb_2:lightbulb" "translate" " -type \"double3\" 5.0856658952872431 3.9627996525729126 4.0226921815696759"
+		2 "|lightbulb_2:lightbulb" "translate" " -type \"double3\" 5.0856658952872431 6.2698139569533708 2.2637251413972557"
 		
 		2 "|lightbulb_2:lightbulb" "translateX" " -av"
 		2 "|lightbulb_2:lightbulb" "translateY" " -av"
 		2 "|lightbulb_2:lightbulb" "translateZ" " -av"
-		2 "|lightbulb_2:lightbulb" "rotate" " -type \"double3\" 229.44710689811581 1.9701271595516119 0"
+		2 "|lightbulb_2:lightbulb" "rotate" " -type \"double3\" 180 3.3250240492821495 0"
 		
 		2 "|lightbulb_2:lightbulb" "rotateX" " -av"
 		2 "|lightbulb_2:lightbulb" "rotateY" " -av"
@@ -3927,8 +3928,8 @@ createNode animCurveTU -n "lightbulb_scaleZ";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  398 0.045608259087479355 411 0.045608259087479355;
 select -ne :time1;
-	setAttr ".o" 500;
-	setAttr ".unw" 500;
+	setAttr ".o" 253;
+	setAttr ".unw" 253;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -4416,42 +4417,42 @@ connectAttr "al_fredo_uvmapped_rigged2RN.phl[255]" "pairBlend2.ity2";
 connectAttr "al_fredo_uvmapped_rigged2RN.phl[256]" "pairBlend2.irx2";
 connectAttr "al_fredo_uvmapped_rigged2RN.phl[257]" "pairBlend2.iry2";
 connectAttr "al_fredo_uvmapped_rigged2RN.phl[258]" "pairBlend2.irz2";
-connectAttr "lightbulb_2RN.phl[1]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tt"
+connectAttr "lightbulb_2RN.phl[1]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tt"
 		;
-connectAttr "lightbulb_2RN.phl[2]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tt"
+connectAttr "lightbulb_2RN.phl[2]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tt"
 		;
 connectAttr "lightbulb_translateX.o" "lightbulb_2RN.phl[3]";
 connectAttr "lightbulb_translateY.o" "lightbulb_2RN.phl[4]";
 connectAttr "lightbulb_translateZ.o" "lightbulb_2RN.phl[5]";
-connectAttr "lightbulb_2RN.phl[6]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tr"
+connectAttr "lightbulb_2RN.phl[6]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tr"
 		;
-connectAttr "lightbulb_2RN.phl[7]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tr"
+connectAttr "lightbulb_2RN.phl[7]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tr"
 		;
 connectAttr "lightbulb_rotateX.o" "lightbulb_2RN.phl[8]";
 connectAttr "lightbulb_rotateY.o" "lightbulb_2RN.phl[9]";
 connectAttr "lightbulb_rotateZ.o" "lightbulb_2RN.phl[10]";
-connectAttr "lightbulb_2RN.phl[11]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].ts"
+connectAttr "lightbulb_2RN.phl[11]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].ts"
 		;
-connectAttr "lightbulb_2RN.phl[12]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].ts"
+connectAttr "lightbulb_2RN.phl[12]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].ts"
 		;
 connectAttr "lightbulb_scaleX.o" "lightbulb_2RN.phl[13]";
 connectAttr "lightbulb_scaleY.o" "lightbulb_2RN.phl[14]";
 connectAttr "lightbulb_scaleZ.o" "lightbulb_2RN.phl[15]";
-connectAttr "lightbulb_2RN.phl[16]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tro"
+connectAttr "lightbulb_2RN.phl[16]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tro"
 		;
-connectAttr "lightbulb_2RN.phl[17]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tro"
+connectAttr "lightbulb_2RN.phl[17]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tro"
 		;
-connectAttr "lightbulb_2RN.phl[18]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].trp"
+connectAttr "lightbulb_2RN.phl[18]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].trp"
 		;
-connectAttr "lightbulb_2RN.phl[19]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].trp"
+connectAttr "lightbulb_2RN.phl[19]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].trp"
 		;
-connectAttr "lightbulb_2RN.phl[20]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].trt"
+connectAttr "lightbulb_2RN.phl[20]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].trt"
 		;
-connectAttr "lightbulb_2RN.phl[21]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].trt"
+connectAttr "lightbulb_2RN.phl[21]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].trt"
 		;
-connectAttr "lightbulb_2RN.phl[22]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tpm"
+connectAttr "lightbulb_2RN.phl[22]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "lightbulb_2RN.phl[23]" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tpm"
+connectAttr "lightbulb_2RN.phl[23]" "alfredo_wrist_lft_ctrl_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "lightbulb_visibility.o" "lightbulb_2RN.phl[24]";
 connectAttr "alfredo_wrist_rgt_ctrl_parentConstraint1.w0" "alfredo_wrist_rgt_ctrl_parentConstraint1.tg[0].tw"
