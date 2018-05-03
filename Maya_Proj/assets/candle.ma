@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: candle.ma
-//Last modified: Wed, May 02, 2018 07:24:16 PM
+//Last modified: Wed, May 02, 2018 07:40:06 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "OmnidirectionalStereo"
@@ -18,13 +18,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "29389C3C-9145-71AC-F916-AAB02D43BD94";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.318116666239325 68.908653120404594 149.96891830565556 ;
-	setAttr ".r" -type "double3" -14.138352729657123 -716.20000000001812 -1.9922266493727252e-16 ;
+	setAttr ".t" -type "double3" 31.379992598880143 75.054533203629873 141.96462667328626 ;
+	setAttr ".r" -type "double3" -21.938352729657129 -708.20000000001744 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1C4422D8-3740-BB49-5191-6290477AC96B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 158.78803083853961;
+	setAttr ".coi" 157.38748400858506;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
