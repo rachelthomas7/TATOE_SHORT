@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Basement_Interior.ma
-//Last modified: Wed, May 02, 2018 10:57:26 PM
+//Last modified: Wed, May 02, 2018 11:15:40 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "step_ladder" -dr 1 -rfn "step_ladderRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/madihight/TATOE_SHORT/Maya_Proj//assets/step_ladder.ma";
@@ -70,13 +70,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "3280CE11-5640-7854-5CBB-ACB441CFF675";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.1680599792951085 8.6118500240206917 48.420126207834969 ;
-	setAttr ".r" -type "double3" -9.3383527298674274 -1.4000000000005879 2.4855503070594135e-17 ;
+	setAttr ".t" -type "double3" -1.5988682873715412 10.947592651381854 37.555364137975062 ;
+	setAttr ".r" -type "double3" -16.538352729867537 0.99999999999942357 -2.4851868508880358e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CDEB1B44-E841-432D-2B06-46ADE9706B7E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 42.559041906636288;
+	setAttr ".coi" 32.465583139290032;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
