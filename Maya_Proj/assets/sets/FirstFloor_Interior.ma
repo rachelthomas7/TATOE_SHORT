@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: FirstFloor_Interior.ma
-//Last modified: Thu, May 03, 2018 01:18:54 PM
+//Last modified: Thu, May 03, 2018 01:53:27 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Armchair" -rfn "ArmchairRN" -op "v=0;" -typ "mayaAscii" "/Users/madihight/TATOE_SHORT/Maya_Proj//assets/Armchair.ma";
 file -rdi 1 -ns "side_table" -rfn "side_tableRN1" -op "v=0;" -typ "mayaAscii"
@@ -48,18 +48,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "ACCC0B03-614D-89AF-A2CE-AEB134176671";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.7784918840975799 5.2445921506217426 1.1193445114655258 ;
-	setAttr ".r" -type "double3" -16.538352766060846 3282.1999999989994 0 ;
+	setAttr ".t" -type "double3" -10.210726080966126 4.4576256989313139 -5.1568617026056165 ;
+	setAttr ".r" -type "double3" -5.1383527660608603 3231.3999999989924 5.0261285641844096e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D568A2B9-D441-BFA0-6585-40877B415CB5";
 	setAttr -k off ".v" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 15.942601119927385;
+	setAttr ".coi" 2.5969370350895584;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -9.0381917322588148 2.0474902750974824 -4.3570294252827946 ;
+	setAttr ".tp" -type "double3" -9.8239527920421388 4.2250413980023183 -7.7142808958854427 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dfg" yes;
 createNode transform -s -n "top";
@@ -6331,10 +6331,13 @@ createNode reference -n "sofa_chairRN";
 lockNode -l 1 ;
 createNode reference -n "picture_frame_hangingRN";
 	rename -uid "4FB0B020-594D-4D9E-18CE-E990DB52BB58";
+	setAttr -s 2 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"picture_frame_hangingRN"
 		"picture_frame_hangingRN" 0
-		"picture_frame_hangingRN" 7
+		"picture_frame_hangingRN" 37
 		0 "|picture_frame_hanging:frame" "|furniture_and_decor" "-s -r "
 		2 "|furniture_and_decor|picture_frame_hanging:frame" "translate" " -type \"double3\" -9.82327713461383922 4.22504139800231737 -7.77101387178050196"
 		
@@ -6342,12 +6345,89 @@ createNode reference -n "picture_frame_hangingRN";
 		
 		2 "|furniture_and_decor|picture_frame_hanging:frame" "scale" " -type \"double3\" 0.14651194140007501 0.14651194140007501 0.14651194140007501"
 		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvPivot" " -type \"double2\" 0.42279463419661711 0.52714994971254525"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints" " -s 24"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.79689926 0.49999985000000002"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.99413781999999995 0.49999985000000002"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.99413781999999995 0.74999994000000003"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.79689926 0.74999994000000003"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.59953635999999999 0.74999994000000003"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.79677509999999996 0.74999994000000003"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.79677509999999996 1"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.59953635999999999 1"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.68237811000000004 1.0004573000000001"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.16321116999999999 1.0004573000000001"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.16321116999999999 0.053842723000000002"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.68237811000000004 0.053842634"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.59953635999999999 0.74999994000000003"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.59953635999999999 0.49999985000000002"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.79677509999999996 0.49999985000000002"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.79677509999999996 0.74999994000000003"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.59953635999999999 0"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.84953648000000004 0"
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.84953648000000004 0.25000011999999999"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.59953635999999999 0.25000011999999999"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.59953635999999999 0.49999985000000002"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.59953635999999999 0.25000011999999999"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.84953617999999997 0.25000011999999999"
+		
+		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:photo|picture_frame_hanging:photoShape" 
+		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.84953617999999997 0.49999985000000002"
+		
 		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:bod" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:bod" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|furniture_and_decor|picture_frame_hanging:frame|picture_frame_hanging:bod" 
-		"scale" " -type \"double3\" 1 1 1";
+		"scale" " -type \"double3\" 1 1 1"
+		2 "picture_frame_hanging:frame_picture_shader" "specularFresnelShape" " 5"
+		
+		3 "picture_frame_hanging:frame_picture_shader.message" "picture_frame_hanging:materialInfo4.texture" 
+		"-na"
+		5 4 "picture_frame_hangingRN" "picture_frame_hanging:frame_picture_shader.diffuseColor" 
+		"picture_frame_hangingRN.placeHolderList[1]" ""
+		5 4 "picture_frame_hangingRN" "picture_frame_hanging:materialInfo4.texture" 
+		"picture_frame_hangingRN.placeHolderList[2]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode PxrSurface -n "floor_shader";
@@ -6563,6 +6643,12 @@ createNode file -n "file10";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture10";
 	rename -uid "B53DB367-0044-43FC-29FC-8ABA77F03278";
+createNode file -n "file11";
+	rename -uid "0230CD77-4949-D70C-5797-A5A9ABDA4194";
+	setAttr ".ftn" -type "string" "/Users/rachelthomas/Google Drive/Art/3D Art/TATOE_SHORT/Maya_Proj//sourceimages/picture_frame/rory_and_reggie_potato_farmers.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture11";
+	rename -uid "D5DE5079-474D-BD69-EF57-399EC8771A6A";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -6610,7 +6696,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 70 ".u";
+	setAttr -s 71 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 10 ".r";
 select -ne :lightList1;
@@ -6620,7 +6706,7 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 91 ".tx";
+	setAttr -s 92 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -6818,6 +6904,8 @@ select -ne :ikSystem;
 connectAttr "side_tableRN1.phl[1]" ":lightEditorRoot.dsm" -na;
 connectAttr "lampRN.phl[1]" ":lightEditorRoot.dsm" -na;
 connectAttr "lampRN.phl[2]" "lampRN.phl[3]";
+connectAttr "file11.oc" "picture_frame_hangingRN.phl[1]";
+connectAttr "file11.msg" "picture_frame_hangingRN.phl[2]";
 connectAttr "pCylinder3_translateX.o" "pCylinder3.tx";
 connectAttr "pCylinder3_translateY.o" "pCylinder3.ty";
 connectAttr "pCylinder3_translateZ.o" "pCylinder3.tz";
@@ -7490,6 +7578,28 @@ connectAttr "place2dTexture10.vt3" "file10.vt3";
 connectAttr "place2dTexture10.vc1" "file10.vc1";
 connectAttr "place2dTexture10.o" "file10.uv";
 connectAttr "place2dTexture10.ofs" "file10.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "file11.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file11.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file11.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file11.ws";
+connectAttr "place2dTexture11.c" "file11.c";
+connectAttr "place2dTexture11.tf" "file11.tf";
+connectAttr "place2dTexture11.rf" "file11.rf";
+connectAttr "place2dTexture11.mu" "file11.mu";
+connectAttr "place2dTexture11.mv" "file11.mv";
+connectAttr "place2dTexture11.s" "file11.s";
+connectAttr "place2dTexture11.wu" "file11.wu";
+connectAttr "place2dTexture11.wv" "file11.wv";
+connectAttr "place2dTexture11.re" "file11.re";
+connectAttr "place2dTexture11.of" "file11.of";
+connectAttr "place2dTexture11.r" "file11.ro";
+connectAttr "place2dTexture11.n" "file11.n";
+connectAttr "place2dTexture11.vt1" "file11.vt1";
+connectAttr "place2dTexture11.vt2" "file11.vt2";
+connectAttr "place2dTexture11.vt3" "file11.vt3";
+connectAttr "place2dTexture11.vc1" "file11.vc1";
+connectAttr "place2dTexture11.o" "file11.uv";
+connectAttr "place2dTexture11.ofs" "file11.fs";
 connectAttr "PxrSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "PxrSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "PxrSurface3SG.pa" ":renderPartition.st" -na;
@@ -7543,6 +7653,7 @@ connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture9.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture10.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture11.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
@@ -7570,5 +7681,6 @@ connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file9.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file11.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file5.oc" ":internal_soloShader.ic";
 // End of FirstFloor_Interior.ma
