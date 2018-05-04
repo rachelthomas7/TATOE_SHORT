@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: FirstFloor_Interior.ma
-//Last modified: Thu, May 03, 2018 01:53:27 PM
+//Last modified: Thu, May 03, 2018 02:02:58 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Armchair" -rfn "ArmchairRN" -op "v=0;" -typ "mayaAscii" "/Users/madihight/TATOE_SHORT/Maya_Proj//assets/Armchair.ma";
 file -rdi 1 -ns "side_table" -rfn "side_tableRN1" -op "v=0;" -typ "mayaAscii"
@@ -48,14 +48,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "ACCC0B03-614D-89AF-A2CE-AEB134176671";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -10.210726080966126 4.4576256989313139 -5.1568617026056165 ;
-	setAttr ".r" -type "double3" -5.1383527660608603 3231.3999999989924 5.0261285641844096e-17 ;
+	setAttr ".t" -type "double3" -5.1554939978956185 5.7498270084589826 5.0644322600998795 ;
+	setAttr ".r" -type "double3" -14.138352766058558 3251.7999999989315 -4.061523958667531e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D568A2B9-D441-BFA0-6585-40877B415CB5";
 	setAttr -k off ".v" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 2.5969370350895584;
+	setAttr ".coi" 14.612940006104745;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
