@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff08 scene
-//Name: Matchstick.ma
-//Last modified: Thu, May 03, 2018 08:21:05 PM
+//Name: matchstick_separate.ma
+//Last modified: Thu, May 03, 2018 08:21:43 PM
 //Codeset: 1252
 requires maya "2018ff08";
 requires -nodeType "RenderMan" -nodeType "PxrBump" -nodeType "PxrDebugShadingContext"
@@ -2095,4 +2095,4 @@ connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "PxrNormalMap1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "PxrBump1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "noise1.msg" ":defaultTextureList1.tx" -na;
-// End of Matchstick.ma
+// End of matchstick_separate.ma
