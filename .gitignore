@@ -53,3 +53,8 @@ Maya_Proj/renderman/*
 
 ### Maya Cache Files ###
 Maya_Proj/cache/*
+
+
+### Maya Autosave ###
+Maya_Proj/autosave/*
+
