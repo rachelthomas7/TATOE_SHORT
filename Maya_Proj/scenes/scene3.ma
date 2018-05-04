@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: scene3.ma
-//Last modified: Thu, May 03, 2018 11:05:50 PM
+//Last modified: Fri, May 04, 2018 12:15:06 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "Basement_Interior" -dr 1 -rfn "Basement_InteriorRN" -op "v=0;"
 		 -typ "mayaAscii" "/Users/rayne/Quark/UCBUGG/tatoe/TATOE_SHORT/Maya_Proj//assets/sets/Basement_Interior.ma";
@@ -72,8 +72,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "B27D92A9-4248-8A09-0C9E-6880B359A596";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.9081415095169794 4.6600144257730651 7.243373373061333 ;
-	setAttr ".r" -type "double3" 3.861647269811789 -362.59999999998632 -1.2436844587993794e-17 ;
+	setAttr ".t" -type "double3" 2.4827992219807582 5.8386907147232963 14.917082190600675 ;
+	setAttr ".r" -type "double3" -6.3383527301900635 -354.59999999995796 -2.4958851716318953e-16 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -4.4408920985006262e-16 8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" 6.0805407143886193e-16 1.5144564884000015e-15 -8.1074816292707879e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -81,7 +81,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 4.0361513824557509;
+	setAttr ".coi" 13.229258554591798;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -315,14 +315,6 @@ createNode camera -n "cameraShape5" -p "camera4";
 	setAttr ".dr" yes;
 createNode transform -n "ortho";
 	rename -uid "81BE8980-0000-437C-5AEB-D9B10000264F";
-	setAttr ".t" -type "double3" 2.4429624966476702 5.1934145405240502 9.5655054305009788 ;
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 168.26164727022677 179.00000000010834 180.00000000000011 ;
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -4.4408920985006262e-16 8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" 6.0805407143886193e-16 1.5144564884000015e-15 -8.1074816292707879e-16 ;
 createNode camera -n "orthoShape" -p "ortho";
@@ -331,8 +323,7 @@ createNode camera -n "orthoShape" -p "ortho";
 	setAttr ".rnd" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr -l on ".coi" 10.75212757309396;
-	setAttr -l on ".ow";
+	setAttr ".coi" 10.75212757309396;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -352,34 +343,34 @@ createNode RenderMan -s -n "renderManGlobals";
 	setAttr ".nt" -type "string" "settings:job";
 	setAttr -s 2 ".p";
 createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
-	rename -uid "9726E980-0000-687B-5AEB-E2D600000287";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD000000287";
 lockNode -l 1 ;
 createNode PxrCamera -s -n "PxrCamera";
-	rename -uid "9726E980-0000-687B-5AEB-E2D600000288";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD000000288";
 lockNode -l 1 ;
 createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
-	rename -uid "9726E980-0000-687B-5AEB-E2D600000289";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD000000289";
 lockNode -l 1 ;
 createNode PxrDefault -s -n "PxrDefault";
-	rename -uid "9726E980-0000-687B-5AEB-E2D60000028A";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD00000028A";
 lockNode -l 1 ;
 createNode PxrDirectLighting -s -n "PxrDirectLighting";
-	rename -uid "9726E980-0000-687B-5AEB-E2D60000028B";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD00000028B";
 lockNode -l 1 ;
 createNode PxrOcclusion -s -n "PxrOcclusion";
-	rename -uid "9726E980-0000-687B-5AEB-E2D60000028C";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD00000028C";
 lockNode -l 1 ;
 createNode PxrPathTracer -s -n "PxrPathTracer";
-	rename -uid "9726E980-0000-687B-5AEB-E2D60000028D";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD00000028D";
 lockNode -l 1 ;
 createNode PxrVCM -s -n "PxrVCM";
-	rename -uid "9726E980-0000-687B-5AEB-E2D60000028E";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD00000028E";
 lockNode -l 1 ;
 createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
-	rename -uid "9726E980-0000-687B-5AEB-E2D60000028F";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD00000028F";
 lockNode -l 1 ;
 createNode PxrVisualizer -s -n "PxrVisualizer";
-	rename -uid "9726E980-0000-687B-5AEB-E2D600000290";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD000000290";
 lockNode -l 1 ;
 createNode RenderMan -s -n "renderManRISGlobals";
 	rename -uid "A4451D54-6649-FC35-483B-B596CCB43281";
@@ -1244,24 +1235,24 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	setAttr ".rman__torattr___task" -type "string" "render";
 	setAttr ".rman__riopt__Hider_name" -type "string" "bake";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9726E980-0000-687B-5AEB-E2D7000002B3";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD1000002B3";
 	setAttr -s 82 ".lnk";
 	setAttr -s 44 ".ign";
 	setAttr -s 82 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9726E980-0000-687B-5AEB-E2D7000002B4";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD1000002B4";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "2CB5E7D6-F84D-A41B-A116-CE96AE840517";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9726E980-0000-687B-5AEB-E2D7000002B6";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD1000002B6";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F82FFB1E-5243-3493-1CFC-71967D42C03F";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9726E980-0000-687B-5AEB-E2D7000002B8";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD1000002B8";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9726E980-0000-687B-5AEB-E2D7000002B9";
+	rename -uid "8B308980-0000-5C86-5AEB-FCD1000002B9";
 createNode partition -n "mtorPartition";
 	rename -uid "63CAA081-F547-0EB9-2C70-1381229F0323";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
@@ -1293,33 +1284,33 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n"
 		+ "            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n"
-		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n"
-		+ "                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
-		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n"
-		+ "                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n"
-		+ "                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
-		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManControlsType\" (localizedPanelLabel(\"RenderMan Controls\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManLightingType\" (localizedPanelLabel(\"RenderMan Light Lister\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Light Lister\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"cam3_1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
-		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
-		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n"
-		+ "                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
-		+ "                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n"
+		+ "                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n"
+		+ "                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n"
+		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n"
+		+ "                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n"
+		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n"
+		+ "                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManControlsType\" (localizedPanelLabel(\"RenderMan Controls\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManLightingType\" (localizedPanelLabel(\"RenderMan Light Lister\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Light Lister\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"cam3_1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
+		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
+		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n"
+		+ "                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n"
+		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1213\\n    -height 701\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1213\\n    -height 701\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "5C347290-5C43-1609-549C-07B7E362CD43";
-	setAttr ".b" -type "string" "playbackOptions -min 284 -max 347 -ast 12 -aet 2503 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 500 -ast 0 -aet 2503 ";
 	setAttr ".st" 6;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "6D56A417-4E4F-2C14-02A0-B78CD095D93B";
@@ -1593,7 +1584,7 @@ createNode animCurveTA -n "alfredo_neck_ctrl_rotateZ";
 	setAttr -s 26 ".ktv[0:25]"  44 20.042497318105031 75 7.9168562049235884 83 9.2270369685301876 85 11.693468438663796
 		 87 10.035803816823863 108 -10.29952623139912 162 -10.29952623139912 219 -10.29952623139912 222 -8.3518219685587844 264 -10.29952623139912 267 -8.3518219685587844 289 -9.6280990669643298
 		 297 -14.21796056035009 302 -14.21796056035009 305 -10.29952623139912 308 -8.3518219685587844 315 -10.29952623139912 318 -8.3518219685587844 417.08888911564628 -8.3518219685587844 422.65926003401358 -7.0416412049521862
-		 424.05185272108844 -4.5752097348185776 425.44444540816329 -6.2328743566585096 439.02222363945577 7.9168562049235884 444.59259455782313 9.2270369685301876 445.98518724489799 11.693468438663796 447.37777993197278 10.035803816823863;
+		 424.05185272108844 -4.5752097348185785 425.44444540816329 -6.2328743566585105 439.02222363945577 7.9168562049235884 444.59259455782313 9.2270369685301876 445.98518724489799 11.693468438663796 447.37777993197278 10.035803816823863;
 	setAttr -s 26 ".kit[0:25]"  1 18 18 18 18 18 18 18 
 		1 18 1 18 18 1 18 1 18 1 18 18 18 1 18 18 18 
 		1;
@@ -3388,160 +3379,206 @@ createNode animCurveTU -n "alfredo_shoulder_lft_ctrl_scaleZ";
 createNode animCurveTA -n "alfredo_elbow_rgt_ctrl_rotateX";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D57";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 0 128 -3.7815736434968272 190 -65.209015443076311 265 -65.209015443076311 268 -71.418887238407748
-		 270 -71.418796232079572 275 -63.511469686377062 303 -65.209015443076311 306 -71.418887238407748 308 -71.418796232079572 313 -63.511469686377062 314 -65.209015443076311 317 -71.418887238407748
-		 319 -71.418796232079572 324 -63.511469686377062 336 -60.059420342149139 349.72727329931973 -65.209015443076311 358.3636387755102 3.8816063725465426 365.04242857142856 -2.3827357758815686;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 4.7650802004195469e-06 0 -0.08888328797298195 0 4.7650802004195469e-06 0 -0.034502617903232127 
-		0 4.7650802004195469e-06 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 1.1912700501048817e-05 0 0 0 1.1912700501048715e-05 0 0 0 1.1912700501049071e-05 
-		0.13994718370655077 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 0 128 -3.7815736434968272 190 -65.209015443076311 220 -65.209015443076311 223 -71.418887238407748
+		 225 -71.418796232079572 230 -63.511469686377062 265 -65.209015443076311 268 -71.418887238407748 270 -71.418796232079572 275 -63.511469686377062 303 -65.209015443076311 306 -71.418887238407748
+		 308 -71.418796232079572 314 -65.209015443076311 317 -71.418887238407748 319 -71.418796232079572 324 -63.511469686377062 336 -60.059420342149139 349.72727329931973 -65.209015443076311 358.3636387755102 3.8816063725465426
+		 365.04242857142856 -2.3827357758815686;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 4.7650802004195469e-06 0 -0.08888328797298195 0 4.7650802004195469e-06 0 -0.08888328797298195 
+		0 4.7650802004195469e-06 0 0 4.7650802004195469e-06 0 0 0 0 0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 1.1912700501048817e-05 0 -0.0076185675405413163 0 1.1912700501048817e-05 0 0 0 
+		1.4295240601258539e-05 0 0 1.1912700501049071e-05 0.13994718370655077 0 0 0 0;
 createNode animCurveTA -n "alfredo_elbow_rgt_ctrl_rotateY";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D58";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 0 128 0 190 -5.4854800901281742 265 -5.4854800901281742 268 -5.4854800901281822
-		 270 -5.4854800901281822 275 -5.4854800901281839 303 -5.4854800901281742 306 -5.4854800901281822 308 -5.4854800901281822 313 -5.4854800901281839 314 -5.4854800901281742 317 -5.4854800901281822
-		 319 -5.4854800901281822 324 -5.4854800901281839 336 -5.4854800901281768 349.72727329931973 -5.4854800901281742 358.3636387755102 -5.4854800901281839 365.04242857142856 -5.4854800901281893;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 0 128 0 190 -5.4854800901281742 220 -5.4854800901281742 223 -5.4854800901281822
+		 225 -5.4854800901281822 230 -5.4854800901281839 265 -5.4854800901281742 268 -5.4854800901281822 270 -5.4854800901281822 275 -5.4854800901281839 303 -5.4854800901281742 306 -5.4854800901281822
+		 308 -5.4854800901281822 314 -5.4854800901281742 317 -5.4854800901281822 319 -5.4854800901281822 324 -5.4854800901281839 336 -5.4854800901281768 349.72727329931973 -5.4854800901281742 358.3636387755102 -5.4854800901281839
+		 365.04242857142856 -5.4854800901281893;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTA -n "alfredo_elbow_rgt_ctrl_rotateZ";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D59";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 0 128 0 190 -2.5280896313868255 265 -2.5280896313868255 268 -2.5280896313868255
-		 270 -2.5280896313868255 275 -2.5280896313868255 303 -2.5280896313868255 306 -2.5280896313868255 308 -2.5280896313868255 313 -2.5280896313868255 314 -2.5280896313868255 317 -2.5280896313868255
-		 319 -2.5280896313868255 324 -2.5280896313868255 336 -2.5280896313868273 349.72727329931973 -2.5280896313868255 358.3636387755102 -2.5280896313868242 365.04242857142856 -2.5280896313868233;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 0 128 0 190 -2.5280896313868255 220 -2.5280896313868255 223 -2.5280896313868255
+		 225 -2.5280896313868255 230 -2.5280896313868255 265 -2.5280896313868255 268 -2.5280896313868255 270 -2.5280896313868255 275 -2.5280896313868255 303 -2.5280896313868255 306 -2.5280896313868255
+		 308 -2.5280896313868255 314 -2.5280896313868255 317 -2.5280896313868255 319 -2.5280896313868255 324 -2.5280896313868255 336 -2.5280896313868273 349.72727329931973 -2.5280896313868255 358.3636387755102 -2.5280896313868242
+		 365.04242857142856 -2.5280896313868233;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "alfredo_elbow_rgt_ctrl_visibility";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D5A";
 	setAttr ".tan" 5;
-	setAttr -s 19 ".ktv[0:18]"  109 1 128 1 190 1 265 1 268 1 270 1 275 1
-		 303 1 306 1 308 1 313 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1 358.3636387755102 1 365.04242857142856 1;
-	setAttr -s 19 ".kit[0:18]"  9 1 9 9 9 9 9 9 
-		9 9 1 9 9 9 1 9 9 9 1;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 1 128 1 190 1 220 1 223 1 225 1 230 1
+		 265 1 268 1 270 1 275 1 303 1 306 1 308 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1
+		 358.3636387755102 1 365.04242857142856 1;
+	setAttr -s 22 ".kit[0:21]"  9 1 9 9 9 9 1 9 
+		9 9 9 9 9 9 9 9 9 1 9 9 9 1;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTL -n "alfredo_elbow_rgt_ctrl_translateX";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D5B";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 0 128 0 190 0 265 0 268 0 270 0 275 0
-		 303 0 306 0 308 0 313 0 314 0 317 0 319 0 324 0 336 0 349.72727329931973 0 358.3636387755102 0 365.04242857142856 0;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 0 128 0 190 0 220 0 223 0 225 0 230 0
+		 265 0 268 0 270 0 275 0 303 0 306 0 308 0 314 0 317 0 319 0 324 0 336 0 349.72727329931973 0
+		 358.3636387755102 0 365.04242857142856 0;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTL -n "alfredo_elbow_rgt_ctrl_translateY";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D5C";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 0 128 0 190 0 265 0 268 0 270 0 275 0
-		 303 0 306 0 308 0 313 0 314 0 317 0 319 0 324 0 336 0 349.72727329931973 0 358.3636387755102 0 365.04242857142856 0;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 0 128 0 190 0 220 0 223 0 225 0 230 0
+		 265 0 268 0 270 0 275 0 303 0 306 0 308 0 314 0 317 0 319 0 324 0 336 0 349.72727329931973 0
+		 358.3636387755102 0 365.04242857142856 0;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTL -n "alfredo_elbow_rgt_ctrl_translateZ";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D5D";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 0 128 0 190 0 265 0 268 0 270 0 275 0
-		 303 0 306 0 308 0 313 0 314 0 317 0 319 0 324 0 336 0 349.72727329931973 0 358.3636387755102 0 365.04242857142856 0;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 0 128 0 190 0 220 0 223 0 225 0 230 0
+		 265 0 268 0 270 0 275 0 303 0 306 0 308 0 314 0 317 0 319 0 324 0 336 0 349.72727329931973 0
+		 358.3636387755102 0 365.04242857142856 0;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "alfredo_elbow_rgt_ctrl_scaleX";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D5E";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 1 128 1 190 1 265 1 268 1 270 1 275 1
-		 303 1 306 1 308 1 313 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1 358.3636387755102 1 365.04242857142856 1;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 1 128 1 190 1 220 1 223 1 225 1 230 1
+		 265 1 268 1 270 1 275 1 303 1 306 1 308 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1
+		 358.3636387755102 1 365.04242857142856 1;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "alfredo_elbow_rgt_ctrl_scaleY";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D5F";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 1 128 1 190 1 265 1 268 1 270 1 275 1
-		 303 1 306 1 308 1 313 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1 358.3636387755102 1 365.04242857142856 1;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 1 128 1 190 1 220 1 223 1 225 1 230 1
+		 265 1 268 1 270 1 275 1 303 1 306 1 308 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1
+		 358.3636387755102 1 365.04242857142856 1;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTU -n "alfredo_elbow_rgt_ctrl_scaleZ";
 	rename -uid "3533A980-0000-7E51-5AEA-9FA800004D60";
 	setAttr ".tan" 18;
-	setAttr -s 19 ".ktv[0:18]"  109 1 128 1 190 1 265 1 268 1 270 1 275 1
-		 303 1 306 1 308 1 313 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1 358.3636387755102 1 365.04242857142856 1;
-	setAttr -s 19 ".kit[1:18]"  1 18 18 18 18 18 18 18 
-		18 1 18 18 18 1 18 18 18 1;
-	setAttr -s 19 ".kot[1:18]"  1 1 18 18 18 18 1 18 
-		18 18 1 18 18 18 18 1 18 18;
-	setAttr -s 19 ".kix[1:18]"  1.2916666666666661 2.5833333333333339 3.1249999999999991 0.125 0.083333333333333925 0.20833333333333393 
-		1.1666666666666661 0.125 0.083333333333333925 0.20833333333333393 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856150793654 0.27828289877735557;
-	setAttr -s 19 ".kiy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 19 ".kox[1:18]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 
-		0.125 0.083333333333333925 0.20833333333333215 0.041666666666667851 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 0.27828290816326628 0.27828290816326628;
-	setAttr -s 19 ".koy[1:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 22 ".ktv[0:21]"  109 1 128 1 190 1 220 1 223 1 225 1 230 1
+		 265 1 268 1 270 1 275 1 303 1 306 1 308 1 314 1 317 1 319 1 324 1 336 1 349.72727329931973 1
+		 358.3636387755102 1 365.04242857142856 1;
+	setAttr -s 22 ".kit[1:21]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18 18 18 1 18 18 18 1;
+	setAttr -s 22 ".kot[1:21]"  1 1 1 18 18 18 18 18 
+		18 18 1 18 18 1 18 18 18 18 1 18 18;
+	setAttr -s 22 ".kix[1:21]"  1.2916666666666661 2.5833333333333339 1.2499999999999991 0.125 0.083333333333333925 0.20833333333333393 
+		1.4583333333333321 0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 
+		0.35984856150793654 0.27828289877735557;
+	setAttr -s 22 ".kiy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
+	setAttr -s 22 ".kox[1:21]"  1.2916666666666661 2.6666666666666661 0.125 0.083333333333333925 0.20833333333333393 1.4583333333333321 
+		0.125 0.083333333333333925 0.20833333333333393 1.1666666666666661 0.125 0.083333333333333925 0.25 0.125 0.083333333333332149 0.20833333333333393 0.5 0.57196972080498831 0.35984856258127568 
+		0.27828290816326628 0.27828290816326628;
+	setAttr -s 22 ".koy[1:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0;
 createNode animCurveTA -n "alfredo_shoulder_lft_ctrl_rotateX1";
 	rename -uid "11F04980-0000-6EB1-5AEB-A2A700000F68";
 	setAttr ".tan" 18;
 	setAttr -s 43 ".ktv[0:42]"  12 0 16 0 20 0 21 1.8001528326582623 22 1.9092554141416078 26 11.93764306835055
 		 30 18.358236615134601 31 16.710825793879931 32 17.175361221595097 36 10.37605207789869 41 4.8298468865902766 42 6.7009070631144834 43 6.5137822774518126 47 15.284136592828204 51 21.059749241727104
 		 52 18.816535943559931 53 19.234167059244324 57 9.5303628257425306 61 3.5670784436883824 62 4.7354329329692186 63 4.6518415057852822 72 16.059310152643487 83 2.4706880064035657 94 37.429752365523463
-		 105 0.67725807530823834 122 26.149877679039651 126 26.149877679039651 135 26.149877679039651 142 26.149877679039651 147 24.191133094693413 349 42.691390278839286 357 17.246605966740781
+		 105 0.67725807530823834 122 26.149877679039651 126 26.149877679039651 135 26.149877679039651 142 26.149877679039651 147 24.191133094693413 349 42.691390278839293 357 17.246605966740781
 		 359 19.92016025034513 409.31852074829931 45.561575307573385 415 24.191133094693413 415.93333452380955 16.059310152643487 422.65926003401358 10.602510948453492 430.31852074829931 45.561575307573385 436.93333452380955 16.059310152643487
 		 437.97778078231295 8.8090810173581637 444.59259455782313 2.4706880064035657 452.25185527210886 37.429752365523463 459.91111530612244 0.67725807530823834;
 	setAttr -s 43 ".kit[25:42]"  1 18 18 18 1 18 18 18 
@@ -4276,107 +4313,107 @@ createNode animCurveTU -n "alfredo_chest_ctrl_scaleZ";
 createNode animCurveTA -n "alfredo_wrist_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD02";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 0 191 -5.9203457184399237 266 -5.9203457184399237 269 -5.2765725116386841 353 -5.9203457184399237
-		 354 2.90746469485916;
+	setAttr -s 6 ".ktv[0:5]"  189 0 191 -5.9203457184399237 266 -5.9203457184399237 269 -5.2765725116386841 352 -5.9203457184399237
+		 353 2.90746469485916;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTA -n "alfredo_wrist_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD03";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 0 191 -14.249958427082309 266 -14.249958427082309 269 -14.49621865198335 353 -14.249958427082309
-		 354 -15.137036820975933;
+	setAttr -s 6 ".ktv[0:5]"  189 0 191 -14.249958427082309 266 -14.249958427082309 269 -14.49621865198335 352 -14.249958427082309
+		 353 -15.137036820975933;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTA -n "alfredo_wrist_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD04";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 0 191 22.84465739655456 266 22.84465739655456 269 20.251675693798596 353 22.84465739655456
-		 354 -11.006381829407678;
+	setAttr -s 6 ".ktv[0:5]"  189 0 191 22.84465739655456 266 22.84465739655456 269 20.251675693798596 352 22.84465739655456
+		 353 -11.006381829407678;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTU -n "alfredo_wrist_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD05";
 	setAttr ".tan" 5;
-	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 353 1 354 1;
+	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 352 1 353 1;
 	setAttr -s 6 ".kit[0:5]"  9 9 9 9 9 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
 createNode animCurveTL -n "alfredo_wrist_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD06";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 0 191 0 266 0 269 0 353 0 354 0;
+	setAttr -s 6 ".ktv[0:5]"  189 0 191 0 266 0 269 0 352 0 353 0;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTL -n "alfredo_wrist_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD07";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 0 191 0 266 0 269 0 353 0 354 0;
+	setAttr -s 6 ".ktv[0:5]"  189 0 191 0 266 0 269 0 352 0 353 0;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTL -n "alfredo_wrist_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD08";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 0 191 0 266 0 269 0 353 0 354 0;
+	setAttr -s 6 ".ktv[0:5]"  189 0 191 0 266 0 269 0 352 0 353 0;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTU -n "alfredo_wrist_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD09";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 353 1 354 1;
+	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 352 1 353 1;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTU -n "alfredo_wrist_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD0A";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 353 1 354 1;
+	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 352 1 353 1;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTU -n "alfredo_wrist_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD0B";
 	setAttr ".tan" 18;
-	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 353 1 354 1;
+	setAttr -s 6 ".ktv[0:5]"  189 1 191 1 266 1 269 1 352 1 353 1;
 	setAttr -s 6 ".kit[5]"  1;
-	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 1;
 	setAttr -s 6 ".kix[5]"  0.625;
 	setAttr -s 6 ".kiy[5]"  0;
-	setAttr -s 6 ".kox[5]"  0.625;
-	setAttr -s 6 ".koy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  0.041666666666666075 0.625;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 createNode animCurveTL -n "alfredo_thumb_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD0C";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4386,7 +4423,7 @@ createNode animCurveTL -n "alfredo_thumb_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_thumb_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD0D";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4396,7 +4433,7 @@ createNode animCurveTL -n "alfredo_thumb_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_thumb_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD0E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4406,7 +4443,7 @@ createNode animCurveTL -n "alfredo_thumb_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_thumb_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD0F";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -24.098054015533126 349 -24.098054015533126 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -24.098054015533126 350 -24.098054015533126 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4416,7 +4453,7 @@ createNode animCurveTA -n "alfredo_thumb_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_thumb_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD10";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -7.9513867036587919e-16 349 -7.9513867036587919e-16 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -7.9513867036587919e-16 350 -7.9513867036587919e-16 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4426,7 +4463,7 @@ createNode animCurveTA -n "alfredo_thumb_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_thumb_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD11";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -36.535159497122784 349 -36.535159497122784 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -36.535159497122784 350 -36.535159497122784 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4436,7 +4473,7 @@ createNode animCurveTA -n "alfredo_thumb_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_thumb_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD12";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4446,7 +4483,7 @@ createNode animCurveTU -n "alfredo_thumb_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_thumb_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD13";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4456,7 +4493,7 @@ createNode animCurveTU -n "alfredo_thumb_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_thumb_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD14";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4466,14 +4503,14 @@ createNode animCurveTU -n "alfredo_thumb_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_thumb_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD15";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_thumb2_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD16";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4483,7 +4520,7 @@ createNode animCurveTL -n "alfredo_thumb2_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_thumb2_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD17";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4493,7 +4530,7 @@ createNode animCurveTL -n "alfredo_thumb2_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_thumb2_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD18";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4503,7 +4540,7 @@ createNode animCurveTL -n "alfredo_thumb2_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_thumb2_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD19";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 48.309435569894639 349 48.309435569894639 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 48.309435569894639 350 48.309435569894639 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4513,7 +4550,7 @@ createNode animCurveTA -n "alfredo_thumb2_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_thumb2_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD1A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 15.203004372386957 349 15.203004372386957 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 15.203004372386957 350 15.203004372386957 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4523,7 +4560,7 @@ createNode animCurveTA -n "alfredo_thumb2_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_thumb2_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD1B";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -78.716290440520169 349 -78.716290440520169 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -78.716290440520169 350 -78.716290440520169 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4533,7 +4570,7 @@ createNode animCurveTA -n "alfredo_thumb2_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_thumb2_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD1C";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4543,7 +4580,7 @@ createNode animCurveTU -n "alfredo_thumb2_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_thumb2_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD1D";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4553,7 +4590,7 @@ createNode animCurveTU -n "alfredo_thumb2_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_thumb2_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD1E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4563,14 +4600,14 @@ createNode animCurveTU -n "alfredo_thumb2_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_thumb2_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD1F";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_pointer1_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD20";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -7.8159700933609127e-14 349 -7.8159700933609127e-14 361 -7.8159700933609127e-14;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -7.8159700933609127e-14 350 -7.8159700933609127e-14 360 -7.8159700933609127e-14;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4580,7 +4617,7 @@ createNode animCurveTL -n "alfredo_pointer1_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_pointer1_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD21";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -1.6957636498029758 349 -1.6957636498029758 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -1.6957636498029758 350 -1.6957636498029758 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4590,7 +4627,7 @@ createNode animCurveTL -n "alfredo_pointer1_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_pointer1_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD22";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -0.51385110353971097 349 -0.51385110353971097 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -0.51385110353971097 350 -0.51385110353971097 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4600,7 +4637,7 @@ createNode animCurveTL -n "alfredo_pointer1_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_pointer1_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD23";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -73.142117075091292 349 -73.142117075091292 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -73.142117075091292 350 -73.142117075091292 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4610,7 +4647,7 @@ createNode animCurveTA -n "alfredo_pointer1_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_pointer1_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD24";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4620,7 +4657,7 @@ createNode animCurveTA -n "alfredo_pointer1_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_pointer1_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD25";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4630,7 +4667,7 @@ createNode animCurveTA -n "alfredo_pointer1_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_pointer1_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD26";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4640,7 +4677,7 @@ createNode animCurveTU -n "alfredo_pointer1_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_pointer1_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD27";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4650,7 +4687,7 @@ createNode animCurveTU -n "alfredo_pointer1_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_pointer1_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD28";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4660,14 +4697,14 @@ createNode animCurveTU -n "alfredo_pointer1_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_pointer1_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD29";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_pointer2_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD2A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4677,7 +4714,7 @@ createNode animCurveTL -n "alfredo_pointer2_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_pointer2_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD2B";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4687,7 +4724,7 @@ createNode animCurveTL -n "alfredo_pointer2_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_pointer2_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD2C";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4697,7 +4734,7 @@ createNode animCurveTL -n "alfredo_pointer2_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_pointer2_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD2D";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -52.007997487243813 349 -52.007997487243813 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -52.007997487243813 350 -52.007997487243813 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4707,7 +4744,7 @@ createNode animCurveTA -n "alfredo_pointer2_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_pointer2_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD2E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4717,7 +4754,7 @@ createNode animCurveTA -n "alfredo_pointer2_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_pointer2_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD2F";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4727,7 +4764,7 @@ createNode animCurveTA -n "alfredo_pointer2_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_pointer2_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD30";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4737,7 +4774,7 @@ createNode animCurveTU -n "alfredo_pointer2_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_pointer2_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD31";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4747,7 +4784,7 @@ createNode animCurveTU -n "alfredo_pointer2_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_pointer2_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD32";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4757,14 +4794,14 @@ createNode animCurveTU -n "alfredo_pointer2_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_pointer2_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD33";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_middle1_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD34";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4774,7 +4811,7 @@ createNode animCurveTL -n "alfredo_middle1_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_middle1_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD35";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4784,7 +4821,7 @@ createNode animCurveTL -n "alfredo_middle1_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_middle1_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD36";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4794,7 +4831,7 @@ createNode animCurveTL -n "alfredo_middle1_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_middle1_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD37";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -66.630917117318148 349 -66.630917117318148 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -66.630917117318148 350 -66.630917117318148 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4804,7 +4841,7 @@ createNode animCurveTA -n "alfredo_middle1_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_middle1_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD38";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4814,7 +4851,7 @@ createNode animCurveTA -n "alfredo_middle1_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_middle1_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD39";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4824,7 +4861,7 @@ createNode animCurveTA -n "alfredo_middle1_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_middle1_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD3A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4834,7 +4871,7 @@ createNode animCurveTU -n "alfredo_middle1_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_middle1_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD3B";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4844,7 +4881,7 @@ createNode animCurveTU -n "alfredo_middle1_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_middle1_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD3C";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4854,14 +4891,14 @@ createNode animCurveTU -n "alfredo_middle1_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_middle1_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD3D";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_middle2_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD3E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4871,7 +4908,7 @@ createNode animCurveTL -n "alfredo_middle2_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_middle2_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD3F";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4881,7 +4918,7 @@ createNode animCurveTL -n "alfredo_middle2_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_middle2_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD40";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4891,7 +4928,7 @@ createNode animCurveTL -n "alfredo_middle2_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_middle2_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD41";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -74.916169166622538 349 -74.916169166622538 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -74.916169166622538 350 -74.916169166622538 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4901,7 +4938,7 @@ createNode animCurveTA -n "alfredo_middle2_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_middle2_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD42";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4911,7 +4948,7 @@ createNode animCurveTA -n "alfredo_middle2_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_middle2_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD43";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4921,7 +4958,7 @@ createNode animCurveTA -n "alfredo_middle2_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_middle2_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD44";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4931,7 +4968,7 @@ createNode animCurveTU -n "alfredo_middle2_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_middle2_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD45";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4941,7 +4978,7 @@ createNode animCurveTU -n "alfredo_middle2_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_middle2_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD46";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4951,14 +4988,14 @@ createNode animCurveTU -n "alfredo_middle2_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_middle2_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD47";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_ring1_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD48";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -1.4494511399471384 349 -1.4494511399471384 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -1.4494511399471384 350 -1.4494511399471384 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4968,7 +5005,7 @@ createNode animCurveTL -n "alfredo_ring1_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_ring1_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD49";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 1.8932661725304283e-29 349 1.8932661725304283e-29 361 1.8932661725304283e-29;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 1.8932661725304283e-29 350 1.8932661725304283e-29 360 1.8932661725304283e-29;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4978,7 +5015,7 @@ createNode animCurveTL -n "alfredo_ring1_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_ring1_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD4A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4988,7 +5025,7 @@ createNode animCurveTL -n "alfredo_ring1_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_ring1_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD4B";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -70.88240301045812 349 -70.88240301045812 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -70.88240301045812 350 -70.88240301045812 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -4998,7 +5035,7 @@ createNode animCurveTA -n "alfredo_ring1_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_ring1_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD4C";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5008,7 +5045,7 @@ createNode animCurveTA -n "alfredo_ring1_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_ring1_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD4D";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5018,7 +5055,7 @@ createNode animCurveTA -n "alfredo_ring1_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_ring1_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD4E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5028,7 +5065,7 @@ createNode animCurveTU -n "alfredo_ring1_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_ring1_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD4F";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5038,7 +5075,7 @@ createNode animCurveTU -n "alfredo_ring1_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_ring1_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD50";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5048,14 +5085,14 @@ createNode animCurveTU -n "alfredo_ring1_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_ring1_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD51";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_ring2_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD52";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5065,7 +5102,7 @@ createNode animCurveTL -n "alfredo_ring2_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_ring2_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD53";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5075,7 +5112,7 @@ createNode animCurveTL -n "alfredo_ring2_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_ring2_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD54";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5085,7 +5122,7 @@ createNode animCurveTL -n "alfredo_ring2_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_ring2_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD55";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -69.200519725620069 349 -69.200519725620069 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -69.200519725620069 350 -69.200519725620069 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5095,7 +5132,7 @@ createNode animCurveTA -n "alfredo_ring2_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_ring2_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD56";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5105,7 +5142,7 @@ createNode animCurveTA -n "alfredo_ring2_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_ring2_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD57";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5115,7 +5152,7 @@ createNode animCurveTA -n "alfredo_ring2_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_ring2_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD58";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5125,7 +5162,7 @@ createNode animCurveTU -n "alfredo_ring2_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_ring2_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD59";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5135,7 +5172,7 @@ createNode animCurveTU -n "alfredo_ring2_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_ring2_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD5A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5145,14 +5182,14 @@ createNode animCurveTU -n "alfredo_ring2_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_ring2_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD5B";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_pinky1_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD5C";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 351 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5162,7 +5199,7 @@ createNode animCurveTL -n "alfredo_pinky1_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_pinky1_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD5D";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 351 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5172,7 +5209,7 @@ createNode animCurveTL -n "alfredo_pinky1_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_pinky1_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD5E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 351 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5182,7 +5219,7 @@ createNode animCurveTL -n "alfredo_pinky1_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_pinky1_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD5F";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -107.10294980847863 350 -107.10294980847863 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -107.10294980847863 351 -107.10294980847863 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5192,7 +5229,7 @@ createNode animCurveTA -n "alfredo_pinky1_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_pinky1_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD60";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 6.1748636593210282 350 6.1748636593210282 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 6.1748636593210282 351 6.1748636593210282 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5202,7 +5239,7 @@ createNode animCurveTA -n "alfredo_pinky1_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_pinky1_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD61";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -23.991735200247909 350 -23.991735200247909 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -23.991735200247909 351 -23.991735200247909 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5212,7 +5249,7 @@ createNode animCurveTA -n "alfredo_pinky1_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_pinky1_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD62";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 351 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5222,7 +5259,7 @@ createNode animCurveTU -n "alfredo_pinky1_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_pinky1_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD63";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 351 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5232,7 +5269,7 @@ createNode animCurveTU -n "alfredo_pinky1_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_pinky1_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD64";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 351 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
@@ -5242,14 +5279,14 @@ createNode animCurveTU -n "alfredo_pinky1_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_pinky1_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD65";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 351 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.541666666666667 1.0416666666666661;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 createNode animCurveTL -n "alfredo_pinky2_rgt_ctrl_translateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD66";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5259,7 +5296,7 @@ createNode animCurveTL -n "alfredo_pinky2_rgt_ctrl_translateX";
 createNode animCurveTL -n "alfredo_pinky2_rgt_ctrl_translateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD67";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5269,7 +5306,7 @@ createNode animCurveTL -n "alfredo_pinky2_rgt_ctrl_translateY";
 createNode animCurveTL -n "alfredo_pinky2_rgt_ctrl_translateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD68";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5279,7 +5316,7 @@ createNode animCurveTL -n "alfredo_pinky2_rgt_ctrl_translateZ";
 createNode animCurveTA -n "alfredo_pinky2_rgt_ctrl_rotateX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD69";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 -104.26554741768541 349 -104.26554741768541 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 -104.26554741768541 350 -104.26554741768541 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5289,7 +5326,7 @@ createNode animCurveTA -n "alfredo_pinky2_rgt_ctrl_rotateX";
 createNode animCurveTA -n "alfredo_pinky2_rgt_ctrl_rotateY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD6A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5299,7 +5336,7 @@ createNode animCurveTA -n "alfredo_pinky2_rgt_ctrl_rotateY";
 createNode animCurveTA -n "alfredo_pinky2_rgt_ctrl_rotateZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD6B";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 349 0 361 0;
+	setAttr -s 4 ".ktv[0:3]"  188 0 190 0 350 0 360 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5309,7 +5346,7 @@ createNode animCurveTA -n "alfredo_pinky2_rgt_ctrl_rotateZ";
 createNode animCurveTU -n "alfredo_pinky2_rgt_ctrl_scaleX";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD6C";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5319,7 +5356,7 @@ createNode animCurveTU -n "alfredo_pinky2_rgt_ctrl_scaleX";
 createNode animCurveTU -n "alfredo_pinky2_rgt_ctrl_scaleY";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD6D";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5329,7 +5366,7 @@ createNode animCurveTU -n "alfredo_pinky2_rgt_ctrl_scaleY";
 createNode animCurveTU -n "alfredo_pinky2_rgt_ctrl_scaleZ";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD6E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
@@ -5339,7 +5376,7 @@ createNode animCurveTU -n "alfredo_pinky2_rgt_ctrl_scaleZ";
 createNode animCurveTU -n "alfredo_pinky2_rgt_ctrl_visibility";
 	rename -uid "11F04980-0000-6EB1-5AEB-C6820000CD6F";
 	setAttr ".tan" 5;
-	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 349 1 361 1;
+	setAttr -s 4 ".ktv[0:3]"  188 1 190 1 350 1 360 1;
 	setAttr -s 4 ".kit[0:3]"  9 9 1 1;
 	setAttr -s 4 ".kix[2:3]"  7.4999999999999991 1.0833333333333339;
 	setAttr -s 4 ".kiy[2:3]"  0 0;
@@ -5620,7 +5657,7 @@ createNode reference -n "Basement_InteriorRN";
 lockNode -l 1 ;
 createNode reference -n "al_fredo_uvmapped_rigged2RN";
 	rename -uid "4B4588A2-B046-4B6C-0819-1EA3E714B577";
-	setAttr -s 272 ".phl";
+	setAttr -s 452 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -5893,10 +5930,190 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 	setAttr ".phl[270]" 0;
 	setAttr ".phl[271]" 0;
 	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
+	setAttr ".phl[360]" 0;
+	setAttr ".phl[361]" 0;
+	setAttr ".phl[362]" 0;
+	setAttr ".phl[363]" 0;
+	setAttr ".phl[364]" 0;
+	setAttr ".phl[365]" 0;
+	setAttr ".phl[366]" 0;
+	setAttr ".phl[367]" 0;
+	setAttr ".phl[368]" 0;
+	setAttr ".phl[369]" 0;
+	setAttr ".phl[370]" 0;
+	setAttr ".phl[371]" 0;
+	setAttr ".phl[372]" 0;
+	setAttr ".phl[373]" 0;
+	setAttr ".phl[374]" 0;
+	setAttr ".phl[375]" 0;
+	setAttr ".phl[376]" 0;
+	setAttr ".phl[377]" 0;
+	setAttr ".phl[378]" 0;
+	setAttr ".phl[379]" 0;
+	setAttr ".phl[380]" 0;
+	setAttr ".phl[381]" 0;
+	setAttr ".phl[382]" 0;
+	setAttr ".phl[383]" 0;
+	setAttr ".phl[384]" 0;
+	setAttr ".phl[385]" 0;
+	setAttr ".phl[386]" 0;
+	setAttr ".phl[387]" 0;
+	setAttr ".phl[388]" 0;
+	setAttr ".phl[389]" 0;
+	setAttr ".phl[390]" 0;
+	setAttr ".phl[391]" 0;
+	setAttr ".phl[392]" 0;
+	setAttr ".phl[393]" 0;
+	setAttr ".phl[394]" 0;
+	setAttr ".phl[395]" 0;
+	setAttr ".phl[396]" 0;
+	setAttr ".phl[397]" 0;
+	setAttr ".phl[398]" 0;
+	setAttr ".phl[399]" 0;
+	setAttr ".phl[400]" 0;
+	setAttr ".phl[401]" 0;
+	setAttr ".phl[402]" 0;
+	setAttr ".phl[403]" 0;
+	setAttr ".phl[404]" 0;
+	setAttr ".phl[405]" 0;
+	setAttr ".phl[406]" 0;
+	setAttr ".phl[407]" 0;
+	setAttr ".phl[408]" 0;
+	setAttr ".phl[409]" 0;
+	setAttr ".phl[410]" 0;
+	setAttr ".phl[411]" 0;
+	setAttr ".phl[412]" 0;
+	setAttr ".phl[413]" 0;
+	setAttr ".phl[414]" 0;
+	setAttr ".phl[415]" 0;
+	setAttr ".phl[416]" 0;
+	setAttr ".phl[417]" 0;
+	setAttr ".phl[418]" 0;
+	setAttr ".phl[419]" 0;
+	setAttr ".phl[420]" 0;
+	setAttr ".phl[421]" 0;
+	setAttr ".phl[422]" 0;
+	setAttr ".phl[423]" 0;
+	setAttr ".phl[424]" 0;
+	setAttr ".phl[425]" 0;
+	setAttr ".phl[426]" 0;
+	setAttr ".phl[427]" 0;
+	setAttr ".phl[428]" 0;
+	setAttr ".phl[429]" 0;
+	setAttr ".phl[430]" 0;
+	setAttr ".phl[431]" 0;
+	setAttr ".phl[432]" 0;
+	setAttr ".phl[433]" 0;
+	setAttr ".phl[434]" 0;
+	setAttr ".phl[435]" 0;
+	setAttr ".phl[436]" 0;
+	setAttr ".phl[437]" 0;
+	setAttr ".phl[438]" 0;
+	setAttr ".phl[439]" 0;
+	setAttr ".phl[440]" 0;
+	setAttr ".phl[441]" 0;
+	setAttr ".phl[442]" 0;
+	setAttr ".phl[443]" 0;
+	setAttr ".phl[444]" 0;
+	setAttr ".phl[445]" 0;
+	setAttr ".phl[446]" 0;
+	setAttr ".phl[447]" 0;
+	setAttr ".phl[448]" 0;
+	setAttr ".phl[449]" 0;
+	setAttr ".phl[450]" 0;
+	setAttr ".phl[451]" 0;
+	setAttr ".phl[452]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"al_fredo_uvmapped_rigged2RN"
 		"al_fredo_uvmapped_rigged2RN" 0
-		"al_fredo_uvmapped_rigged2RN" 716
+		"al_fredo_uvmapped_rigged2RN" 1082
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl" 
 		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl" 
@@ -5927,7 +6144,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
 		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
-		"translate" " -type \"double3\" -135.90180241996057475 -86.78629453653299208 1.20062279010578976"
+		"translate" " -type \"double3\" -135.90180241996057475 -86.78463769824138296 1.20062279010578887"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl" 
 		"translateX" " -av"
@@ -5962,7 +6179,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl" 
-		"rotate" " -type \"double3\" 0 0 14.93472864506763464"
+		"rotate" " -type \"double3\" 0 0 12.70913033482867327"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl" 
@@ -6014,7 +6231,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl" 
-		"rotate" " -type \"double3\" 0 0 9.77395597610680333"
+		"rotate" " -type \"double3\" 0 0 5.00746668795207572"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl" 
@@ -6051,7 +6268,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl" 
-		"rotate" " -type \"double3\" 40.71431749390655597 -1.29206459999999979 -20.36082616697111902"
+		"rotate" " -type \"double3\" 22.21481746963829451 -1.2920646000000009 -20.36082616697111902"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl" 
 		"rotateZ" " -av"
@@ -6185,7 +6402,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl" 
-		"rotate" " -type \"double3\" 83.02822327147927695 -5.31915158173209601 19.78830981068758277"
+		"rotate" " -type \"double3\" 20.65811610972061985 -5.31915158173211022 19.78830981068758987"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl" 
 		"rotateZ" " -av"
@@ -6212,7 +6429,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl" 
-		"rotate" " -type \"double3\" -71.41879623207957195 -5.48548009012818216 -2.52808963138682552"
+		"rotate" " -type \"double3\" -0.9835423330719002 -5.48548009012818838 -2.52808963138682374"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl" 
 		"rotateX" " -av"
@@ -6229,7 +6446,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl" 
 		"scaleZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl" 
-		"rotate" " -type \"double3\" -5.56402991748169384 -14.38625861533611783 21.4094930521447111"
+		"rotate" " -type \"double3\" 2.90746469485916004 -15.13703682097593273 -11.00638182940767784"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl" 
 		"rotateX" " -av"
@@ -6250,7 +6467,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl" 
-		"rotate" " -type \"double3\" -24.0980540155331262 0 -36.53515949712278399"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl" 
@@ -6276,8 +6493,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_ctrl" 
-		"rotate" " -type \"double3\" 48.30943556989463872 15.20300437238695679 -78.71629044052016866"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_thumb2_rgt_ctrl" 
@@ -6295,7 +6511,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
 		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
-		"translate" " -type \"double3\" 0 -1.69576364980297578 -0.51385110353971097"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
 		"translateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
@@ -6303,7 +6519,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
-		"rotate" " -type \"double3\" -73.14211707509129212 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl" 
@@ -6329,7 +6545,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_ctrl" 
-		"rotate" " -type \"double3\" -52.00799748724381288 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pointer2_rgt_ctrl" 
@@ -6355,7 +6571,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_ctrl" 
-		"rotate" " -type \"double3\" -66.63091711731814826 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_ctrl" 
@@ -6371,13 +6587,13 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_ctrl" 
 		"scaleZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_middle2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle2_rgt_ctrl" 
-		"rotate" " -type \"double3\" -74.916169166622538 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_middle2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_middle2_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
 		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
-		"translate" " -type \"double3\" -1.44945113994713837 0 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
 		"translateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
@@ -6385,7 +6601,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
-		"rotate" " -type \"double3\" -70.88240301045811975 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl" 
@@ -6418,7 +6634,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_ctrl" 
-		"rotate" " -type \"double3\" -69.20051972562006881 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_ring2_rgt_ctrl" 
@@ -6444,8 +6660,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_ctrl" 
-		"rotate" " -type \"double3\" -107.10294980847862689 6.17486365932102821 -23.99173520024790918"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_ctrl" 
@@ -6477,7 +6692,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_pinky2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky2_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_pinky2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky2_rgt_ctrl" 
-		"rotate" " -type \"double3\" -104.26554741768541135 0 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_shoulder_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_shoulder_lft_ctrl|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_elbow_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_wrist_rgt_ctrl|al_fredo_uvmapped_rigged2:right_arm_ik_cntrl|al_fredo_uvmapped_rigged2:_control|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky1_rgt_ctrl|al_fredo_uvmapped_rigged2:alfredo_pinky2_rgt_grp|al_fredo_uvmapped_rigged2:alfredo_pinky2_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl" 
@@ -6507,7 +6722,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl|al_fredo_uvmapped_rigged2:alfredo_head_grp|al_fredo_uvmapped_rigged2:alfredo_head_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl|al_fredo_uvmapped_rigged2:alfredo_head_grp|al_fredo_uvmapped_rigged2:alfredo_head_ctrl" 
-		"rotate" " -type \"double3\" 0 0 -40.3405720455023058"
+		"rotate" " -type \"double3\" 0 0 -25.48910597112040932"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl|al_fredo_uvmapped_rigged2:alfredo_head_grp|al_fredo_uvmapped_rigged2:alfredo_head_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:alfredo_root_grp|al_fredo_uvmapped_rigged2:alfredo_root_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine1_grp|al_fredo_uvmapped_rigged2:alfredo_spine1_ctrl|al_fredo_uvmapped_rigged2:alfredo_spine2_grp|al_fredo_uvmapped_rigged2:alfredo_spine2_ctrl|al_fredo_uvmapped_rigged2:alfredo_chest_grp|al_fredo_uvmapped_rigged2:alfredo_chest_ctrl|al_fredo_uvmapped_rigged2:alfredo_neck_grp|al_fredo_uvmapped_rigged2:alfredo_neck_ctrl|al_fredo_uvmapped_rigged2:alfredo_head_grp|al_fredo_uvmapped_rigged2:alfredo_head_ctrl" 
@@ -6596,7 +6811,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_ctrl" 
 		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_ctrl" 
-		"translate" " -type \"double3\" -218.55610140237186556 -27.86814246639828596 -6.55928017512073414"
+		"translate" " -type \"double3\" -216.18990685848839917 -27.9387750053488837 -6.87667736061899681"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_ctrl" 
 		"translateX" " -av"
@@ -6605,7 +6820,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_ctrl" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_ctrl" 
-		"rotate" " -type \"double3\" 0 64.90676421136672047 0"
+		"rotate" " -type \"double3\" 0 83.26236386002968004 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_ctrl" 
 		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_ik_pntr_rgt_ctrl" 
@@ -6731,7 +6946,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:HeelPivot_lft|al_fredo_uvmapped_rigged2:StandTip_lft|al_fredo_uvmapped_rigged2:footik" 
 		"ikBlend" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
-		"translate" " -type \"double3\" -0.81158017875263333 2.23055300059525319 19.80949442071124622"
+		"translate" " -type \"double3\" -1.39852479761919835 -0.42585193821227207 18.11189941044382579"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"translateX" " -av"
@@ -6740,7 +6955,7 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_rgt" 
 		"translateZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
-		"translate" " -type \"double3\" 0.85547750247031562 -0.34111977319884978 18.70754684057369488"
+		"translate" " -type \"double3\" 0.91098312524121727 -0.42123071029289427 18.14678785804951744"
 		
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"translateZ" " -av"
@@ -6748,54 +6963,426 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		"translateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:arm_ik_lft" 
 		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo:Merged_alfredofull2:alfredo|al_fredo_uvmapped_rigged2:alfredo:Merged_alfredofull2:hair" 
+		"visibility" " 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"translate" " -type \"double3\" 0.0097308571911225439 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
-		"translate" " -type \"double3\" 0 -0.21622756568906573 0"
+		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"translate" " -type \"double3\" 0.0097308571911225439 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
-		"translate" " -type \"double3\" 0 -0.21622756568906573 0"
+		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl" 
+		"scaleZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"translate" " -type \"double3\" 0.0097308571911225439 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
-		"translate" " -type \"double3\" 0 -0.21622756568905863 0"
+		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"translate" " -type \"double3\" 0.0097308571911225439 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
-		"translate" " -type \"double3\" 0 -0.21622756568905863 0"
+		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl" 
+		"scaleZ" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"translate" " -type \"double3\" 0.0097308571911225439 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
-		"translate" " -type \"double3\" 0 -0.21622756568906573 0"
+		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"translate" " -type \"double3\" 0.0097308571911225439 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
-		"translate" " -type \"double3\" 0 -0.21622756568906573 0"
+		"rotateX" " -av"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"visibility" " -av 1"
 		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"visibility" " -av 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"translateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"translateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"translateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"rotateX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"rotateY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"rotateZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"scaleX" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"scaleY" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl" 
+		"scaleZ" " -av"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:group1" 
+		"visibility" " 0"
+		2 "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:group2" 
+		"visibility" " 0"
 		2 "al_fredo_uvmapped_rigged2:correctiveblendshapes" "midLayerParent" " 0"
 		
 		2 "al_fredo_uvmapped_rigged2:correctiveblendshapes" "targetDirectory[0].childIndices" 
@@ -7351,7 +7938,367 @@ createNode reference -n "al_fredo_uvmapped_rigged2RN";
 		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_foot_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_foot_rgt_ctrl.scaleY" 
 		"al_fredo_uvmapped_rigged2RN.placeHolderList[271]" ""
 		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:alfredo_master_grp|al_fredo_uvmapped_rigged2:alfredo_master_ctrl|al_fredo_uvmapped_rigged2:al_fredo_foot_rgt_grp|al_fredo_uvmapped_rigged2:al_fredo_foot_rgt_ctrl.scaleZ" 
-		"al_fredo_uvmapped_rigged2RN.placeHolderList[272]" "";
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[272]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[273]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[274]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[275]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[276]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[277]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[278]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[279]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[280]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[281]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[282]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[283]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[284]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[285]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[286]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[287]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[288]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[289]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[290]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[291]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[292]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[293]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[294]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[295]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[296]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[297]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[298]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[299]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[300]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[301]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller5|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[302]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[303]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[304]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[305]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[306]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[307]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[308]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[309]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[310]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[311]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_far_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[312]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[313]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[314]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[315]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[316]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[317]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[318]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[319]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[320]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[321]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_mid_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[322]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[323]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[324]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[325]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[326]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[327]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[328]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[329]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[330]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[331]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller6|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_bottom_eyebrow_detail_close_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[332]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[333]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[334]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[335]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[336]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[337]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[338]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[339]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[340]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[341]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[342]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[343]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[344]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[345]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[346]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[347]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[348]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[349]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[350]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[351]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[352]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[353]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[354]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[355]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[356]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[357]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[358]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[359]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[360]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[361]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller7|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[362]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[363]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[364]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[365]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[366]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[367]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[368]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[369]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[370]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[371]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_far_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[372]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[373]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[374]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[375]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[376]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[377]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[378]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[379]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[380]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[381]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_mid_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[382]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[383]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[384]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[385]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[386]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[387]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[388]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[389]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[390]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[391]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller8|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_middle_eyebrow_detail_close_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[392]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[393]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[394]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[395]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[396]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[397]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[398]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[399]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[400]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[401]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[402]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[403]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[404]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[405]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[406]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[407]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[408]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[409]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[410]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[411]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[412]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[413]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[414]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[415]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[416]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[417]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[418]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[419]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[420]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[421]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller9|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_l_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_l_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[422]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[423]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[424]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[425]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[426]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[427]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[428]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[429]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[430]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[431]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_far_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[432]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[433]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[434]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[435]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[436]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[437]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[438]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[439]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[440]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[441]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_mid_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[442]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.translateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[443]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.translateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[444]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.translateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[445]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.rotateX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[446]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.rotateY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[447]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.rotateZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[448]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.scaleX" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[449]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.scaleY" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[450]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.scaleZ" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[451]" ""
+		5 4 "al_fredo_uvmapped_rigged2RN" "|al_fredo_uvmapped_rigged2:alfredo_everything_group|al_fredo_uvmapped_rigged2:controller10|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_r_cntrl|al_fredo_uvmapped_rigged2:alfredo_top_eyebrow_detail_close_r_cntrl.visibility" 
+		"al_fredo_uvmapped_rigged2RN.placeHolderList[452]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Light_Socket_ModelRN";
@@ -7370,7 +8317,7 @@ createNode reference -n "Light_Socket_ModelRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Light_Socket_ModelRN"
 		"Light_Socket_ModelRN" 0
-		"Light_Socket_ModelRN" 16
+		"Light_Socket_ModelRN" 27
 		2 "|Light_Socket_Model:light_socket" "translate" " -type \"double3\" 2.25405520364712952 5.66094548837165856 2.73726403351908143"
 		
 		2 "|Light_Socket_Model:light_socket" "rotate" " -type \"double3\" 0 180 0"
@@ -7379,13 +8326,35 @@ createNode reference -n "Light_Socket_ModelRN";
 		
 		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_base" "rotate" 
 		" -type \"double3\" 0 0 0"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "visibility" 
+		" -av 1"
 		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "translate" 
-		" -type \"double3\" 0 -0.38108284351941712 0"
+		" -type \"double3\" 0 0.068641229100765866 0"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "translateX" 
+		" -av"
 		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "translateY" 
 		" -av"
-		5 4 "Light_Socket_ModelRN" "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads.translateY" 
-		"Light_Socket_ModelRN.placeHolderList[1]" ""
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "translateZ" 
+		" -av"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "rotate" 
+		" -type \"double3\" 0 0 0"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "rotateX" 
+		" -av"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "rotateY" 
+		" -av"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "rotateZ" 
+		" -av"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "scale" 
+		" -type \"double3\" 1 1 1"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "scaleX" 
+		" -av"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "scaleY" 
+		" -av"
+		2 "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads" "scaleZ" 
+		" -av"
 		5 4 "Light_Socket_ModelRN" "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads.translateX" 
+		"Light_Socket_ModelRN.placeHolderList[1]" ""
+		5 4 "Light_Socket_ModelRN" "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads.translateY" 
 		"Light_Socket_ModelRN.placeHolderList[2]" ""
 		5 4 "Light_Socket_ModelRN" "|Light_Socket_Model:light_socket|Light_Socket_Model:socket_beads.translateZ" 
 		"Light_Socket_ModelRN.placeHolderList[3]" ""
@@ -7436,7 +8405,22 @@ createNode reference -n "Basement_InteriorRN1";
 		
 		2 "|Basement_Interior:basement_walls" "scale" " -type \"double3\" 28.53186391330338978 0.39998043364419139 18.95222274893918168"
 		
-		"Basement_Interior:basementLightRigRN" 0;
+		"Basement_Interior:basementLightRigRN" 7
+		2 "|Basement_Interior:basementLightRig:fredKeyLightBlockerLightFilter1" "visibility" 
+		" 1"
+		2 "|Basement_Interior:basementLightRig:fredKeyLightBlockerLightFilter1" "translate" 
+		" -type \"double3\" 13.03949365360663215 4.83820816479742355 2.44547842964052498"
+		
+		2 "|Basement_Interior:basementLightRig:fredKeyLightBlockerLightFilter1" "translateX" 
+		" -av"
+		2 "|Basement_Interior:basementLightRig:fredKeyLightBlockerLightFilter1" "translateY" 
+		" -av"
+		2 "|Basement_Interior:basementLightRig:fredKeyLightBlockerLightFilter1" "translateZ" 
+		" -av"
+		2 "|Basement_Interior:basementLightRig:fredKeyLightBlockerLightFilter1" "rotate" 
+		" -type \"double3\" 0 90 0"
+		2 "|Basement_Interior:basementLightRig:fredKeyLightBlockerLightFilter1" "scale" 
+		" -type \"double3\" 1 1 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "stairsRN";
@@ -7455,51 +8439,1162 @@ lockNode -l 1 ;
 createNode animCurveTA -n "socket_beads_rotateX";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE00002089";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 0 269 0 275 0 278 0;
+	setAttr -s 18 ".ktv[0:17]"  220 0 224 0 230 0 233 0 265 0 269 0 275 0
+		 278 0 303 0 307 0 313 0 318 0 324 0 327 0 335 0 349 0 351 0 353 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "socket_beads_rotateY";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE0000208A";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 0 269 0 275 0 278 0;
+	setAttr -s 18 ".ktv[0:17]"  220 0 224 0 230 0 233 0 265 0 269 0 275 0
+		 278 0 303 0 307 0 313 0 318 0 324 0 327 0 335 0 349 0 351 0 353 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "socket_beads_rotateZ";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE0000208B";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 0 269 0 275 0 278 0;
+	setAttr -s 18 ".ktv[0:17]"  220 0 224 0 230 0 233 0 265 0 269 0 275 0
+		 278 0 303 0 307 0 313 0 318 0 324 0 327 0 335 0 349 0 351 0 353 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "socket_beads_visibility";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE0000208C";
-	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  265 1 269 1 275 1 278 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr ".tan" 5;
+	setAttr -s 18 ".ktv[0:17]"  220 1 224 1 230 1 233 1 265 1 269 1 275 1
+		 278 1 303 1 307 1 313 1 318 1 324 1 327 1 335 1 349 1 351 1 353 1;
+	setAttr -s 18 ".kit[0:17]"  9 9 9 9 1 9 9 9 
+		1 9 9 9 9 1 9 9 9 9;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "socket_beads_translateX";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE0000208D";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 0 269 0 275 0 278 0;
+	setAttr -s 18 ".ktv[0:17]"  220 0 224 0 230 0 233 0 265 0 269 0 275 0
+		 278 0 303 0 307 0 313 0 318 0 324 0 327 0 335 0 349 0 351 0 353 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "socket_beads_translateY";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE0000208E";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 0 269 -2.861401443461534 275 -0.039578232375107936 278 -0.38108284351941712;
+	setAttr -s 18 ".ktv[0:17]"  220 0 224 -2.861401443461534 230 -0.039578232375107936 233 -0.38108284351941712 265 -0.33650879975317333
+		 269 -2.861401443461534 275 -0.039578232375107936 278 -0.38108284351941712 303 -0.5204255407295264 307 -2.861401443461534 313 -0.039578232375107936 318 -2.861401443461534 324 -0.039578232375107936
+		 327 -0.38108284351941712 335 -0.24180071667171471 349 -0.63733434324343441 351 0.20352347209614449 353 0.068641229100765866;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 -0.050163370995639368 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 -0.41802809163032784 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "socket_beads_translateZ";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE0000208F";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 0 269 0 275 0 278 0;
+	setAttr -s 18 ".ktv[0:17]"  220 0 224 0 230 0 233 0 265 0 269 0 275 0
+		 278 0 303 0 307 0 313 0 318 0 324 0 327 0 335 0 349 0 351 0 353 0;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "socket_beads_scaleX";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE00002090";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 1 269 1 275 1 278 1;
+	setAttr -s 18 ".ktv[0:17]"  220 1 224 1 230 1 233 1 265 1 269 1 275 1
+		 278 1 303 1 307 1 313 1 318 1 324 1 327 1 335 1 349 1 351 1 353 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "socket_beads_scaleY";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE00002091";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 1 269 1 275 1 278 1;
+	setAttr -s 18 ".ktv[0:17]"  220 1 224 1 230 1 233 1 265 1 269 1 275 1
+		 278 1 303 1 307 1 313 1 318 1 324 1 327 1 335 1 349 1 351 1 353 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "socket_beads_scaleZ";
 	rename -uid "9726E980-0000-687B-5AEB-F7AE00002092";
 	setAttr ".tan" 18;
-	setAttr -s 4 ".ktv[0:3]"  265 1 269 1 275 1 278 1;
+	setAttr -s 18 ".ktv[0:17]"  220 1 224 1 230 1 233 1 265 1 269 1 275 1
+		 278 1 303 1 307 1 313 1 318 1 324 1 327 1 335 1 349 1 351 1 353 1;
+	setAttr -s 18 ".kit[4:17]"  1 18 18 18 1 18 18 18 
+		18 1 18 18 18 18;
+	setAttr -s 18 ".kot[4:17]"  1 18 18 18 1 18 18 1 
+		18 18 18 18 18 18;
+	setAttr -s 18 ".kix[4:17]"  0.125 0.16666666666666785 0.25 0.125 0.125 0.16666666666666607 0.25 
+		0.20833333333333393 0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".kiy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 18 ".kox[4:17]"  1.3333333333333321 0.25 0.125 1.0416666666666661 1.0416666666666661 0.25 0.20833333333333393 
+		0.25 0.125 0.33333333333333393 0.58333333333333215 0.083333333333333925 0.083333333333333925 0.083333333333333925;
+	setAttr -s 18 ".koy[4:17]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "ortho_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-00B100000B39";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 1 52 1 101 1 104 1;
+	setAttr -s 4 ".kit[1:3]"  1 9 3;
+	setAttr -s 4 ".kot[1:3]"  1 5 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "ortho_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-00B100000B3A";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 1 52 1 101 1 104 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "ortho_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-00B100000B3B";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 1 52 1 101 1 104 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "ortho_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-00B100000B3C";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 1 52 1 101 1 104 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "ortho_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-018300000B6E";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 -3.0553209215394013 52 -3.0553209215394013 101 2.5 104 2.4429624966476702;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "ortho_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-018300000B6F";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 5.1934145405240502 52 5.1934145405240502 101 5.1934145405240502 104 5.1934145405240502;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "ortho_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-018300000B70";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 9.5655054305009788 52 9.5655054305009788 101 9.5655054305009788 104 9.5655054305009788;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "ortho_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-018300000B71";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 168.26164727022677 52 168.26164727022677 101 168.26164727022677 104 168.26164727022677;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "ortho_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-018300000B72";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 179.00000000010834 52 179.00000000010834 101 179.00000000010834 104 179.00000000010834;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "ortho_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-018300000B73";
+	setAttr ".tan" 3;
+	setAttr -s 4 ".ktv[0:3]"  0 180.00000000000011 52 180.00000000000011 101 180.00000000000011 104 180.00000000000011;
+	setAttr -s 4 ".kit[1:3]"  1 18 3;
+	setAttr -s 4 ".kot[1:3]"  1 18 3;
+	setAttr -s 4 ".kix[1:3]"  4.208333333333333 2.0416666666666665 0.125;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  4.208333333333333 0.125 0.125;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D62";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0.0097308571911225439 289 0.0097308571911225439 299 0.0097308571911225439;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D63";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 -0.056384353533033157 289 -0.056384353533033157 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D64";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 2.3143870331433341e-15 289 2.3143870331433341e-15 299 2.3143870331433341e-15;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D65";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0.0097308571911225439 289 0.0097308571911225439 299 0.0097308571911225439;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D66";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 -0.056384353533033157 289 -0.056384353533033157 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D67";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 2.3143870331433341e-15 289 2.3143870331433341e-15 299 2.3143870331433341e-15;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_close_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D68";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0.0097308571911225439 289 0.0097308571911225439 299 0.0097308571911225439;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_close_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D69";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 -0.056384353533033157 289 -0.056384353533033157 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_close_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D6A";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 2.3143870331433341e-15 289 2.3143870331433341e-15 299 2.3143870331433341e-15;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D6B";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0.0097308571911225439 289 0.0097308571911225439 299 0.0097308571911225439;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D6C";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 -0.056384353533033157 289 -0.056384353533033157 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D6D";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 2.3143870331433341e-15 289 2.3143870331433341e-15 299 2.3143870331433341e-15;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_close_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D6E";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0.0097308571911225439 289 0.0097308571911225439 299 0.0097308571911225439;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_close_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D6F";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 -0.056384353533033157 289 -0.056384353533033157 299 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_close_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D70";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 2.3143870331433341e-15 289 2.3143870331433341e-15 299 2.3143870331433341e-15;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_mid_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D71";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0.0097308571911225439 289 0.0097308571911225439 299 0.0097308571911225439;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_mid_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D72";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 -0.056384353533033157 289 -0.056384353533033157 299 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_mid_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D73";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 2.3143870331433341e-15 289 2.3143870331433341e-15 299 2.3143870331433341e-15;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D74";
+	setAttr ".tan" 9;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D75";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D76";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D77";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D78";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D79";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D7A";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D7B";
+	setAttr ".tan" 9;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D7C";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D7D";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D7E";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D7F";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D80";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D81";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D82";
+	setAttr ".tan" 9;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_close_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D83";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_close_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D84";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_close_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D85";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D86";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D87";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D88";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D89";
+	setAttr ".tan" 9;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_mid_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D8A";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_mid_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D8B";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_mid_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D8C";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D8D";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D8E";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D8F";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D90";
+	setAttr ".tan" 9;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_close_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D91";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_close_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D92";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_close_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D93";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D94";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D95";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D96";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D97";
+	setAttr ".tan" 9;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D98";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D99";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D9A";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 0 240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D9B";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D9C";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06A900000D9D";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  83 1 240 1 247 1 289 1 299 1;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_far_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DC9";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_far_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DCA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 -0.092393537040373022 289 -0.092393537040373022 299 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_far_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DCB";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_mid_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DCC";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_mid_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DCD";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 -0.092393537040373022 289 -0.092393537040373022 299 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_mid_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DCE";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DCF";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD0";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 -0.092393537040373022 289 -0.092393537040373022 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD1";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD2";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD3";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 -0.092393537040373022 289 -0.092393537040373022 299 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD4";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_far_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD5";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_far_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD6";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 -0.092393537040373022 289 -0.092393537040373022 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_far_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD7";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD8";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DD9";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 -0.092393537040373022 289 -0.092393537040373022 299 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DDA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DDB";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_mid_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DDC";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_mid_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DDD";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_mid_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DDE";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DDF";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE0";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_mid_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE1";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE2";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_far_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE3";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_far_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE4";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_far_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE5";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE6";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE7";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE8";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DE9";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DEA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DEB";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DEC";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DED";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DEE";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_mid_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DEF";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF0";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF1";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF2";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF3";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF4";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF5";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF6";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF7";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF8";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DF9";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DFA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DFB";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DFC";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_mid_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DFD";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DFE";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_far_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000DFF";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_far_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000E00";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_far_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000E01";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000E02";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000E03";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-06F200000E04";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E43";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 8.6789513742875033e-16 289 8.6789513742875033e-16 298 8.6789513742875033e-16;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E44";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0.67670678498358039 289 0.67670678498358039 298 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E45";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 5.7859675828583352e-16 289 5.7859675828583352e-16 298 5.7859675828583352e-16;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_far_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E46";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 8.6789513742875033e-16 289 8.6789513742875033e-16 298 8.6789513742875033e-16;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_far_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E47";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0.67670678498358039 289 0.67670678498358039 298 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_far_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E48";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 5.7859675828583352e-16 289 5.7859675828583352e-16 298 5.7859675828583352e-16;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_far_l_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E49";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 8.6789513742875033e-16 289 8.6789513742875033e-16 298 8.6789513742875033e-16;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_far_l_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E4A";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0.67670678498358039 289 0.67670678498358039 298 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_far_l_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E4B";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 5.7859675828583352e-16 289 5.7859675828583352e-16 298 5.7859675828583352e-16;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E4C";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E4D";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E4E";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E4F";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E50";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E51";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_far_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E52";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E53";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_far_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E54";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_far_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E55";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_far_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E56";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E57";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E58";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_far_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E59";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_l_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E5A";
+	setAttr ".tan" 9;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_far_l_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E5B";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_far_l_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E5C";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_far_l_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E5D";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 298 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_l_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E5E";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_l_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E5F";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_far_l_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-075300000E60";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 298 1;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_close_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EA5";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 2.2204460492503131e-16 247 2.2204460492503131e-16 289 2.2204460492503131e-16 299 2.2204460492503131e-16;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_close_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EA6";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 -7.1054273576010019e-15 247 0.54720789266936543 289 0.54720789266936543 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_top_eyebrow_detail_close_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EA7";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EA8";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 2.2204460492503131e-16 247 2.2204460492503131e-16 289 2.2204460492503131e-16 299 2.2204460492503131e-16;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EA9";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 -7.1054273576010019e-15 247 0.54720789266936543 289 0.54720789266936543 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EAA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_close_r_cntrl_translateX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EAB";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 2.2204460492503131e-16 247 2.2204460492503131e-16 289 2.2204460492503131e-16 299 2.2204460492503131e-16;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_close_r_cntrl_translateY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EAC";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0.54720789266937253 289 0.54720789266937253 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTL -n "alfredo_middle_eyebrow_detail_close_r_cntrl_translateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EAD";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EAE";
+	setAttr ".tan" 5;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[0:3]"  9 1 9 9;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_close_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EAF";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_close_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB0";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_top_eyebrow_detail_close_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB1";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB2";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB3";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_top_eyebrow_detail_close_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB4";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB5";
+	setAttr ".tan" 5;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[0:3]"  9 1 9 9;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB6";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB7";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB8";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EB9";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EBA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_bottom_eyebrow_detail_close_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EBB";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_r_cntrl_visibility";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EBC";
+	setAttr ".tan" 5;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[0:3]"  9 1 9 9;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_close_r_cntrl_rotateX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EBD";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_close_r_cntrl_rotateY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EBE";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTA -n "alfredo_middle_eyebrow_detail_close_r_cntrl_rotateZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EBF";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 0 247 0 289 0 299 0;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_r_cntrl_scaleX";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EC0";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_r_cntrl_scaleY";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EC1";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
+createNode animCurveTU -n "alfredo_middle_eyebrow_detail_close_r_cntrl_scaleZ";
+	rename -uid "8B308980-0000-5C86-5AEC-078300000EC2";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  240 1 247 1 289 1 299 1;
+	setAttr -s 4 ".kit[1:3]"  1 18 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[1:3]"  0.25 1.75 0.41666666666666785;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  0.25 0.41666666666666785 0.41666666666666785;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 308;
-	setAttr -av ".unw" 308;
+	setAttr -k on ".o" 363;
+	setAttr -av ".unw" 363;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -7536,7 +9631,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 74 ".u";
+	setAttr -s 73 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 16 ".r";
 select -ne :lightList1;
@@ -7546,7 +9641,7 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 89 ".tx";
+	setAttr -s 88 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -8257,8 +10352,368 @@ connectAttr "al_fredo_foot_rgt_ctrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[2
 		;
 connectAttr "al_fredo_foot_rgt_ctrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[272]"
 		;
-connectAttr "socket_beads_translateY.o" "Light_Socket_ModelRN.phl[1]";
-connectAttr "socket_beads_translateX.o" "Light_Socket_ModelRN.phl[2]";
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[273]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[274]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[275]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[276]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[277]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[278]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[279]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[280]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[281]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[282]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[283]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[284]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[285]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[286]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[287]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[288]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[289]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[290]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[291]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[292]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[293]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[294]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[295]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[296]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[297]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[298]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[299]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[300]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[301]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[302]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[303]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[304]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[305]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[306]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[307]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[308]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[309]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[310]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[311]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_far_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[312]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[313]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[314]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[315]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[316]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[317]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[318]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[319]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[320]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[321]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_mid_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[322]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[323]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[324]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[325]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[326]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[327]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[328]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[329]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[330]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[331]"
+		;
+connectAttr "alfredo_bottom_eyebrow_detail_close_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[332]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[333]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[334]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[335]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[336]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[337]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[338]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[339]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[340]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[341]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[342]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[343]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[344]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[345]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[346]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[347]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[348]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[349]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[350]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[351]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[352]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[353]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[354]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[355]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[356]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[357]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[358]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[359]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[360]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[361]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[362]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[363]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[364]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[365]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[366]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[367]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[368]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[369]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[370]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[371]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_far_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[372]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[373]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[374]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[375]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[376]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[377]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[378]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[379]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[380]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[381]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_mid_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[382]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[383]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[384]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[385]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[386]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[387]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[388]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[389]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[390]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[391]"
+		;
+connectAttr "alfredo_middle_eyebrow_detail_close_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[392]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[393]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[394]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[395]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[396]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[397]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[398]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[399]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[400]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[401]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[402]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[403]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[404]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[405]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[406]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[407]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[408]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[409]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[410]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[411]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[412]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[413]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[414]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[415]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[416]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[417]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[418]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[419]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[420]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[421]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_l_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[422]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[423]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[424]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[425]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[426]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[427]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[428]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[429]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[430]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[431]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_far_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[432]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[433]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[434]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[435]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[436]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[437]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[438]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[439]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[440]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[441]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_mid_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[442]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_translateX.o" "al_fredo_uvmapped_rigged2RN.phl[443]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_translateY.o" "al_fredo_uvmapped_rigged2RN.phl[444]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_translateZ.o" "al_fredo_uvmapped_rigged2RN.phl[445]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_rotateX.o" "al_fredo_uvmapped_rigged2RN.phl[446]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_rotateY.o" "al_fredo_uvmapped_rigged2RN.phl[447]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_rotateZ.o" "al_fredo_uvmapped_rigged2RN.phl[448]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_scaleX.o" "al_fredo_uvmapped_rigged2RN.phl[449]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_scaleY.o" "al_fredo_uvmapped_rigged2RN.phl[450]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_scaleZ.o" "al_fredo_uvmapped_rigged2RN.phl[451]"
+		;
+connectAttr "alfredo_top_eyebrow_detail_close_r_cntrl_visibility.o" "al_fredo_uvmapped_rigged2RN.phl[452]"
+		;
+connectAttr "socket_beads_translateX.o" "Light_Socket_ModelRN.phl[1]";
+connectAttr "socket_beads_translateY.o" "Light_Socket_ModelRN.phl[2]";
 connectAttr "socket_beads_translateZ.o" "Light_Socket_ModelRN.phl[3]";
 connectAttr "socket_beads_rotateX.o" "Light_Socket_ModelRN.phl[4]";
 connectAttr "socket_beads_rotateY.o" "Light_Socket_ModelRN.phl[5]";
@@ -8279,6 +10734,16 @@ connectAttr "camera1_scaleY.o" "camera1.sy";
 connectAttr "camera1_scaleZ.o" "camera1.sz";
 connectAttr "polyExtrudeFace1.out" "pCubeShape1.i";
 connectAttr "polyCube2.out" "volcubeShape.i";
+connectAttr "ortho_translateX.o" "ortho.tx";
+connectAttr "ortho_translateY.o" "ortho.ty";
+connectAttr "ortho_translateZ.o" "ortho.tz";
+connectAttr "ortho_rotateX.o" "ortho.rx";
+connectAttr "ortho_rotateY.o" "ortho.ry";
+connectAttr "ortho_rotateZ.o" "ortho.rz";
+connectAttr "ortho_visibility.o" "ortho.v";
+connectAttr "ortho_scaleX.o" "ortho.sx";
+connectAttr "ortho_scaleY.o" "ortho.sy";
+connectAttr "ortho_scaleZ.o" "ortho.sz";
 connectAttr ":rmanFinalGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr ":rmanRerenderRISGlobals.msg" ":renderManGlobals.p" -na;
 connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
