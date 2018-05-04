@@ -52,7 +52,7 @@ $RECYCLE.BIN/
 Maya_Proj/renderman/*
 
 ### Maya Cache Files ###
-Maya_Proj/cache/*
+# Maya_Proj/cache/* Start Using Caches Now
 
 
 ### Maya Autosave ###
