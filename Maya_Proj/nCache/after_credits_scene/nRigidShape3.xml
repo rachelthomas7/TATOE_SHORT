@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Autodesk_Cache_File>
+  <cacheType Type="OneFile" Format="mcx"/>
+  <time Range="250-13750"/>
+  <cacheTimePerFrame TimePerFrame="250"/>
+  <cacheVersion Version="2.0"/>
+  <extra>/Users/oliverjek/Desktop/ALFREDOSHORT/TATOE_SHORT/Maya_Proj/assets/after_credits_scene.ma</extra>
+  <extra>maya 2017</extra>
+  <extra>oliverjek</extra>
+  <extra>NCloth Info for nRigidShape3:</extra>
+  <extra>Passive Colliders:  al_fredo_uvmapped_rigged2:alfredo:Merged_alfredofull2:body Bedroom_Interior1:bed_UVmapped:Matress Bedroom_Interior1:bed_UVmapped:bed_frame</extra>
+  <extra>Constraints: none</extra>
+  <extra>nRigidShape3.depthSort=0</extra>
+  <extra>nRigidShape3.isDynamic=1</extra>
+  <extra>nRigidShape3.evaluationTime=1</extra>
+  <extra>nRigidShape3.playFromCache=0</extra>
+  <extra>nRigidShape3.thickness=0.01521181129</extra>
+  <extra>nRigidShape3.bounce=0</extra>
+  <extra>nRigidShape3.friction=0.1000000015</extra>
+  <extra>nRigidShape3.damp=0</extra>
+  <extra>nRigidShape3.stickiness=0</extra>
+  <extra>nRigidShape3.collideStrength=1</extra>
+  <extra>nRigidShape3.collisionFlag=3</extra>
+  <extra>nRigidShape3.selfCollisionFlag=1</extra>
+  <extra>nRigidShape3.maxSelfCollisionIterations=4</extra>
+  <extra>nRigidShape3.maxIterations=10000</extra>
+  <extra>nRigidShape3.pointMass=1</extra>
+  <extra>nRigidShape3.restLengthScale=1</extra>
+  <extra>nRigidShape3.localForceX=0</extra>
+  <extra>nRigidShape3.localForceY=0</extra>
+  <extra>nRigidShape3.localForceZ=0</extra>
+  <extra>nRigidShape3.localWindX=0</extra>
+  <extra>nRigidShape3.localWindY=0</extra>
+  <extra>nRigidShape3.localWindZ=0</extra>
+  <extra>nRigidShape3.collide=1</extra>
+  <extra>nRigidShape3.selfCollide=0</extra>
+  <extra>nRigidShape3.collisionLayer=0</extra>
+  <extra>nRigidShape3.windShadowDiffusion=0</extra>
+  <extra>nRigidShape3.windShadowDistance=0</extra>
+  <extra>nRigidShape3.airPushDistance=0</extra>
+  <extra>nRigidShape3.airPushVorticity=0</extra>
+  <extra>nRigidShape3.pushOut=0</extra>
+  <extra>nRigidShape3.pushOutRadius=0.06084724516</extra>
+  <extra>nRigidShape3.crossoverPush=0</extra>
+  <extra>nRigidShape3.trappedCheck=1</extra>
+  <extra>nRigidShape3.forceField=0</extra>
+  <extra>nRigidShape3.fieldMagnitude=1</extra>
+  <extra>nRigidShape3.fieldDistance=1</extra>
+  <extra>nRigidShape3.fieldScale[0].fieldScale_Position=0</extra>
+  <extra>nRigidShape3.fieldScale[0].fieldScale_FloatValue=1</extra>
+  <extra>nRigidShape3.fieldScale[0].fieldScale_Interp=1</extra>
+  <extra>nRigidShape3.fieldScale[1].fieldScale_Position=1</extra>
+  <extra>nRigidShape3.fieldScale[1].fieldScale_FloatValue=0</extra>
+  <extra>nRigidShape3.fieldScale[1].fieldScale_Interp=1</extra>
+  <extra>nRigidShape3.pointForceField=0</extra>
+  <extra>nRigidShape3.pointFieldMagnitude=1</extra>
+  <extra>nRigidShape3.selfAttract=0</extra>
+  <extra>nRigidShape3.pointFieldDistance=2</extra>
+  <extra>nRigidShape3.pointFieldDropoff[0].pointFieldDropoff_Position=0</extra>
+  <extra>nRigidShape3.pointFieldDropoff[0].pointFieldDropoff_FloatValue=1</extra>
+  <extra>nRigidShape3.pointFieldDropoff[0].pointFieldDropoff_Interp=1</extra>
+  <extra>nRigidShape3.pointFieldDropoff[1].pointFieldDropoff_Position=1</extra>
+  <extra>nRigidShape3.pointFieldDropoff[1].pointFieldDropoff_FloatValue=0</extra>
+  <extra>nRigidShape3.pointFieldDropoff[1].pointFieldDropoff_Interp=1</extra>
+  <extra>nRigidShape3.localSpaceOutput=0</extra>
+  <extra>nRigidShape3.displayColorR=1</extra>
+  <extra>nRigidShape3.displayColorG=0.8000000119</extra>
+  <extra>nRigidShape3.displayColorB=0</extra>
+  <extra>nucleus1.visibility=1</extra>
+  <extra>nucleus1.translateX=0</extra>
+  <extra>nucleus1.translateY=0</extra>
+  <extra>nucleus1.translateZ=0</extra>
+  <extra>nucleus1.rotateX=0</extra>
+  <extra>nucleus1.rotateY=0</extra>
+  <extra>nucleus1.rotateZ=0</extra>
+  <extra>nucleus1.scaleX=1</extra>
+  <extra>nucleus1.scaleY=1</extra>
+  <extra>nucleus1.scaleZ=1</extra>
+  <extra>nucleus1.currentTime=1</extra>
+  <extra>nucleus1.startFrame=1</extra>
+  <extra>nucleus1.frameJumpLimit=1</extra>
+  <extra>nucleus1.enable=1</extra>
+  <extra>nucleus1.useTransform=1</extra>
+  <extra>nucleus1.gravity=9.800000191</extra>
+  <extra>nucleus1.gravityDirectionX=0</extra>
+  <extra>nucleus1.gravityDirectionY=-1</extra>
+  <extra>nucleus1.gravityDirectionZ=0</extra>
+  <extra>nucleus1.airDensity=1</extra>
+  <extra>nucleus1.windSpeed=0</extra>
+  <extra>nucleus1.windDirectionX=1</extra>
+  <extra>nucleus1.windDirectionY=0</extra>
+  <extra>nucleus1.windDirectionZ=0</extra>
+  <extra>nucleus1.windNoise=0</extra>
+  <extra>nucleus1.collisionLayerRange=4</extra>
+  <extra>nucleus1.collisionSoftness=0</extra>
+  <extra>nucleus1.usePlane=0</extra>
+  <extra>nucleus1.planeOriginX=0</extra>
+  <extra>nucleus1.planeOriginY=0</extra>
+  <extra>nucleus1.planeOriginZ=0</extra>
+  <extra>nucleus1.planeNormalX=0</extra>
+  <extra>nucleus1.planeNormalY=1</extra>
+  <extra>nucleus1.planeNormalZ=0</extra>
+  <extra>nucleus1.planeBounce=0</extra>
+  <extra>nucleus1.planeFriction=0.1000000015</extra>
+  <extra>nucleus1.planeStickiness=0</extra>
+  <extra>nucleus1.subSteps=3</extra>
+  <extra>nucleus1.maxCollisionIterations=4</extra>
+  <extra>nucleus1.timeScale=1</extra>
+  <extra>nucleus1.spaceScale=1</extra>
+  <Channels>
+    <channel0 ChannelName="nRigidShape3" ChannelType="FloatVectorArray" ChannelInterpretation="positions" SamplingType="Regular" SamplingRate="250" StartTime="250" EndTime="13750"/>
+  </Channels>
+</Autodesk_Cache_File>
